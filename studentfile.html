@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<head>
+                        <title>personal file</title>
+                        <link rel="stylesheet" href="file.css">
+</head>
+
+<body>
+                        <header class="header" data-header> <!--- راس الصفحة -->
+                                                <div class="container"> <!-- عنصر للهيدر -->
+                                            
+                                                  <a href="#" class="logo"> <!-- شعار الموقع-->
+                                                    <img src="./images/Logobr.jpeg" width="100" height="50" alt="">
+                                                  </a>
+                                            
+                                                  <nav class="navbar" data-navbar> <!--- ازرار التنقل بالصفحة -->
+                                            
+                                                    <div class="wrapper">
+                                                      
+                                            
+                                                      <button class="nav-close-btn" aria-label="close menu" data-nav-toggler><!-- زر إغلاق شريط التنقل -->
+                                                        <ion-icon name="close-outline" aria-hidden="true"></ion-icon> <!--ايقونة الاغلاق -->
+                                                      </button>
+                                                    </div>
+                                            
+                                                    <ul class="navbar-list"> <!--- قائمة شريط التنقل -->
+                                            
+                                                      <li class="navbar-item">
+                                                        <a href="home.html" class="navbar-link" data-nav-link>Home</a> <!--- زر home -->
+                                                      </li>
+                                            
+                                                      <li class="navbar-item">
+                                                        <a href="#about" class="navbar-link" data-nav-link>About</a><!--- زر التعريف -->
+                                                      </li>
+                                            
+                                                      <li class="navbar-item">
+                                                        <a href="#courses" class="navbar-link" data-nav-link>Trainers</a>  <!---  زر المدربون-->
+                                                      </li>
+                                            
+                                                      <li class="navbar-item">
+                                                        <a href="#blog" class="navbar-link" data-nav-link>News</a> <!--زر الاخبار -->
+                                                      </li>
+                                            
+                                                      <li class="navbar-item">
+                                                        <a href="#" class="navbar-link" data-nav-link>Contact</a> <!---زر التواصل -->
+                                                      </li>
+                                            
+                                                    </ul>
+                                            
+                                                  </nav>
+                                            
+                                                  <div class="header-actions"> <!-- أزرار الإجراءات -->
+                                            
+                        
+                                            
+                                                    <a href="Login.html" class="btn has-before" > <!-- زر التسجيل -->
+                                                      <span class="span">user</span>
+                                            
+                                                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                                                    </a>
+                                            
+                                                    <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+                                                      <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+                                                    </button>
+                                            
+                                                  </div>
+                                            
+                                                  <div class="overlay" data-nav-toggler data-overlay></div> <!--- تراكيب القائمة -->
+                                            
+                                                </div>
+                                              </header>
+
+
+
+
+
+
+
+                                              <div class="container1">
+
+                                                <div class="box1">
+                                                    <h2>Welcome to bridge language</h2>
+                                                    <p>We wish you a happy journey and successful learning</p>
+                                                </div>
+                                                <div class="box">
+                                                                        <h2>Edit profile</h2>
+                                                                        <div class="content">
+                                                                        <div class="input-box1">
+                                                                                                <label for="name">first name</label>
+                                                                                                <input type="text" placeholder="Enter first name" name="name" required>
+                                                                                                </div>
+                                                                                                <div class="input-box1">
+                                                                                                <label for="name">last name</label>
+                                                                                                <input type="text" placeholder="Enter last name" name="name" required>
+                                                                                                </div>
+                                                                                                <div class="input-box1">
+                                                                                                <label for="name">Email</label>
+                                                                                                <input type="email" placeholder="Enter your email" name="email" required>
+                                                                                                </div>
+                                                                                                <div class="input-box1">
+                                                                                                <label for="name">password</label>
+                                                                                                <input type="password" placeholder="Enter your password" name="password" required>
+                                                                                                </div>
+                                                                                                <div class="input-box1">
+                                                                                                <label for="location">location</label>
+                                                                                                <input type="text" placeholder="location" name="location" required>
+                                                                                                </div>
+                                                                                                <div class="input-box1">
+                                                                                                <label for="city">city</label>
+                                                                                                <input type="text" placeholder="city" name="city" required>
+                                                                                                </div>
+                                                                                                <div class="input-box1">
+                                                                                                <label for="age">age</label>
+                                                                                                <input type="text" placeholder="age" name="age" required>
+                                                                                                </div>
+                                                                                                <div class="input-box1">
+                                                                                                <label for="image">image</label>
+                                                                                                <input type="file" id="image" accept="image" >
+                                                                                                </div>
+                                                                    </div>
+                                                                    <div class="button-container1">
+                                                                        <button class="submit"><a href="home.html">Exit</a></button>
+                                                                        <button class="submit"><a href="home.html">Submit</a></button>
+                                                                        </div>
+                                                </div>
+                                                <div class="box">
+                                                    <h2>Book your session</h2>
+                                                    <p>Choose a session date and reserve your place</p>
+                                                    
+                                                    <div class="button-container">
+                                                                        <button class="submit" ><a href="Curricula.html">Book a free session</a></button>
+                                                                        </div>
+                                                </div>
+                                        
+                                                <div class="box">
+                                                    <h2>Determine the level of proficiency</h2>
+                                                    <p>Assess your level of language proficiency</p>
+                                                    <select>
+                                                        <option value="beginner">Beginner</option>
+                                                        <option value="intermediate">Intermediate</option>
+                                                        <option value="advanced">Advanced</option>
+                                                    </select>
+                                                </div>
+                                        
+                                                <div class="box session-level">
+                                                    <div>
+                                                        <h3>timetable</h3>
+                                                        <table class="schedule-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Day</th>
+                                                                    <th>Time</th>
+                                                                    <th>Duration</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Monday</td>
+                                                                    <td>10:00 AM</td>
+                                                                    <td>1 o'clock</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Wednesday</td>
+                                                                    <td>2:00 PM</td>
+                                                                    <td>1.5 o'clock</td>
+                                                                </tr>
+                                                                <!-- يمكنك إضافة المزيد من الصفوف حسب الحاجة -->
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div>
+                                                        <h3></h3>
+                                                        <input type="number" placeholder="Duration of the session">
+                                                    </div>
+                                                </div>
+                                        
+                                                <div class="box">
+                                                    <h2>The overlooked language</h2>
+                                                    <p>Choose the language you want to learn</p>
+                                                    <select>
+                                                        <option value="english">English </option>
+                                                        <option value="french">French</option>
+                                                        <option value="spanish">Spanish</option>
+                                                    </select>
+                                                </div>
+                                        
+                                            </div>
+                                        
+</body>

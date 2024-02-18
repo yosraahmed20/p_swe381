@@ -1,0 +1,654 @@
+:root{
+
+                         /* colors
+                         */
+                      
+                         --selective-yellow:#d3e9f8;
+                         --eerie-black-1: hsl(0, 0%, 9%);
+                         --eerie-black-2: hsl(180, 3%, 7%);
+                         --quick-silver: hsl(0, 0%, 65%);
+                         --radical-red: #84cbe3;
+                         --light-gray: hsl(0, 0%, 80%);
+                         --isabelline: hsl(36, 33%, 94%);
+                         --gray-x-11: hsl(0, 0%, 73%);
+                         --kappel_15: hsla(170, 75%, 41%, 0.15);
+                         --platinum: hsl(0, 0%, 90%);
+                         --gray-web: hsl(0, 0%, 50%);
+                         --black_80: hsla(0, 0%, 0%, 0.8);
+                         --white_50: hsla(0, 0%, 100%, 0.5);
+                         --black_50: hsla(0, 0%, 0%, 0.5);
+                         --black_30: hsla(0, 0%, 0%, 0.3);
+                         --kappel: #e68b61;
+                         --white: hsl(0, 0%, 100%);
+                       
+                         /**
+                          * gradient color
+                          */
+                       
+                         --gradient: linear-gradient(-90deg,hsl(151, 58%, 46%) 0%,hsl(170, 75%, 41%) 100%);
+                       
+                         /**
+                          * typography
+                          */
+                       
+                         --ff-league_spartan: 'League Spartan', sans-serif;
+                         --ff-poppins: 'Poppins', sans-serif; 
+                       
+                         --fs-1: 4.2rem;
+                         --fs-2: 3.2rem;
+                         --fs-3: 2.3rem;
+                         --fs-4: 1.8rem;
+                         --fs-5: 1.5rem;
+                         --fs-6: 1.4rem;
+                         --fs-7: 1.3rem;
+                       
+                         --fw-500: 500;
+                         --fw-600: 600;
+                       
+                         /**
+                          * spacing
+                          */
+                       
+                         --section-padding: 75px;
+                       
+                         /**
+                          * shadow
+                          */
+                       
+                         --shadow-1: 0 6px 15px 0 hsla(0, 0%, 0%, 0.05);
+                         --shadow-2: 0 10px 30px hsla(0, 0%, 0%, 0.06);
+                         --shadow-3: 0 10px 50px 0 hsla(220, 53%, 22%, 0.1);
+                       
+                         /**
+                          * radius
+                          */
+                       
+                         --radius-pill: 500px;
+                         --radius-circle: 50%;
+                         --radius-3: 3px;
+                         --radius-5: 5px;
+                         --radius-10: 10px;
+                       
+                         /**
+                          * transition
+                          */
+                       
+                         --transition-1: 0.25s ease;
+                         --transition-2: 0.5s ease;
+                         --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+                         --cubic-out: c                        
+}
+
+                       
+                       
+                       
+                       
+                       
+                       
+
+
+.header .btn { display: none; }/* إخفاء زر الهامش عندما يكون الهامش نشطًا */
+                      
+                      .header {/* تحديد خصائص الهامش */
+                        position: absolute;/* تحديد وضع الهامش ليكون مطلقًا */
+                        top: 0;/* تحديد الهامش في الأعلى */
+                        left: 0;/* تحديد الهامش في اليسار */
+                        width: 100%;/* تحديد عرض الهامش بنسبة 100% */
+                        background-color: var(--white);/* تحديد لون خلفية الهامش */
+                        padding-block: 12px;/* تحديد هوامش عمودية للهامش */
+                        box-shadow: var(--shadow-1);/* تحديد ظل للهامش */
+                        z-index: 4;/* تحديد ترتيب الطبقات */
+                      }
+                      
+                      .header.active/* تحديد خصائص للهامش عندما يكون نشطًا */
+                       { position: fixed; } /* تحديد وضع الهامش ليكون ثابتًا عند التمرير */
+                      
+                      .header .container,
+                      .header-actions,
+                      .navbar .wrapper {/* تحديد خصائص للعناصر داخل الهامش (container, header-actions, navbar .wrapper) */
+                        display: flex; /* تحديد عرض العناصر كمرنر *//* تحديد توزيع المسافات بين العناصر */
+                        justify-content: space-between; /* تحديد محاذاة العناصر في الاتجاه الرأسي */
+                        align-items: center; /* تحديد المسافات بين العناصر */
+                        gap: 15px;
+                      }
+                      
+                      .header-action-btn,
+                      .nav-close-btn {/* تحديد خصائص للأزرار والزر لإغلاق القائمة */
+                        position: relative; /* تحديد وضع الأزرار ليكون نسبيًا للهامش */
+                        color: var(--eerie-black-1); /* تحديد لون النص */
+                        font-size: 24px; /* تحديد حجم الخط */
+                        transition: var(--transition-1);/* تحديد وقت التحول */
+                      }
+                      
+                      .header-action-btn:is(:hover, :focus) { color: var(--kappel); }/* تغيير لون النص عند تحويم أو تركيز على الزر */
+                      
+                      .header-action-btn .btn-badge {/* تحديد خصائص للشارة الظاهرة على الأزرار */
+                        position: absolute;/* تحديد وضع الشارة ليكون مطلقًا */
+                        top: -10px;/* تحديد الهامش العلوي للشارة */
+                        right: -10px;/* تحديد الهامش الأيمن للشارة */
+                        background-color: var(--kappel);/* تحديد لون خلفية الشارة */
+                        color: var(--black_30);/* تحديد لون النص في الشارة */
+                        font-family: var(--ff-league_spartan);/* تحديد نوع الخط في الشارة */
+                        font-size: var(--fs-6);/* تحديد حجم الخط في الشارة */
+                        min-width: 20px; /* تحديد أدنى عرض للشارة */
+                        height: 20px; /* تحديد ارتفاع الشارة */
+                        border-radius: var(--radius-circle); /* تحديد شكل الزاوية للشارة */
+                      }
+                      
+                      .navbar {
+                        position: fixed; /* تحديد وضع القائمة ليكون ثابتًا */
+  top: 0; /* تحديد الهامش العلوي للقائمة */
+  left: -320px; /* تحديد الهامش الأيسر للقائمة (تكون خارج الشاشة) */
+  background-color: var(--white); /* تحديد لون خلفية القائمة */
+  width: 100%; /* تحديد عرض القائمة بنسبة 100% */
+  max-width: 320px; /* تحديد أقص*/
+                        max-width: 320px;
+                        height: 100%;
+                        z-index: 2;
+                        transition: 0.25s var(--cubic-in);
+                      }
+                      
+                      .navbar.active {
+                        transform: translateX(320px); /* تحريك القائمة إلى اليمين لتظهر بشكل كامل */
+  transition: 0.5s var(--cubic-out); /* تحديد وقت التحول للقائمة النشطة */
+}
+                      
+                      
+                      /* تحديد خصائص لعناصر القائمة (wrapper) */
+               .navbar .wrapper {
+                        padding: 15px 20px; /* تحديد هوامش داخلية لعناصر القائمة */
+                        border-block-end: 1px solid var(--platinum); /* إضافة حد للحد السفلي للعناصر */
+                      }
+                      
+                      /* تحديد خصائص لزر إغلاق القائمة */
+            .nav-close-btn {
+                        background-color: var(--white); /* تحديد لون خلفية زر الإغلاق */
+                        box-shadow: var(--shadow-2); /* تحديد ظل لزر الإغلاق */
+                        padding: 8px; /* تحديد هوامش داخلية لزر الإغلاق */
+                        border-radius: var(--radius-circle); /* تحديد شكل الزاوية لزر الإغلاق */
+                      }
+                      
+                      /* تغيير لون زر الإغلاق عند التحويم أو التركيز عليه */
+.nav-close-btn:is(:hover, :focus) {
+                        background-color: var(--kappel); /* تحديد لون خلفية زر الإغلاق عند التحويم أو التركيز */
+                        color: var(--white); /* تحديد لون النص في زر الإغلاق عند التحويم أو التركيز */
+                      }
+                      
+                      /* تحديد خصائص لعناصر القائمة (navbar-list) */
+.navbar-list {
+                        padding: 15px 20px; /* تحديد هوامش داخلية لعناصر القائمة */
+                        
+                        
+                      }
+                      
+                      /* تحديد خصائص لعنصر القائمة (navbar-item) عندما لا يكون آخر عنصر */
+.navbar-item:not(:last-child) {
+                        border-block-end: 1px solid var(--platinum); /* إضافة حد للحد السفلي للعناصر غير الأخيرة */
+                      }
+                      
+                      .navbar-link {
+                        padding-block: 8px; /* تحديد هوامش داخلية للروابط داخل القائمة */
+                        font-weight: var(--fw-500); /* تحديد وزن الخط للروابط */
+                        transition: var(--transition-1); /* تحديد وقت التحول للروابط */
+                        
+                      }
+                      
+                      /* تغيير لون الرابط عند التحويم أو التركيز عليه */
+.navbar-link:is(:hover, :focus) {
+                        color: var(--black_30); /* تحديد لون النص للروابط عند التحويم أو التركيز */
+                      }
+                      
+                     
+                        .overlay {
+                        position: fixed; /* تحديد وضع التأثير الغامض ليكون ثابتًا */
+                        inset: 0; /* تحديد حواف التأثير لتكون في الزاوية الأربع */
+                        background-color: var(--black_50); /* تحديد لون خلفية التأثير الغامض */
+                        pointer-events: none; /* تعط*/
+                        opacity: 0;
+                        z-index: 1;
+                        transition: var(--transition-1);
+                      }
+                      
+                      .overlay.active {
+                        opacity: 1;
+                        pointer-events: all;
+                      }
+
+
+                      
+                      
+                      .shape {/* تحديد خصائص للعنصر shape */
+                        position: absolute;/* تحديد وضع العنصر ليكون مطلقًا */
+                        display: none;/* إخفاء العنصر */
+                      }
+                      
+                      .has-bg-image {/* تحديد خصائص للعناصر التي تحمل صورة خلفية */
+                        background-repeat: no-repeat;/* عدم تكرار الصورة */
+                        background-size: cover; /* تغطية كاملة للخلفية */
+                        background-position: center;/* توسيط الصورة */
+                      }
+                      
+                     
+                      
+                      
+                      
+                      
+                      
+                      .btn {/* تحديد خصائص للأزرار */
+                        background-color: var(--kappel);/* تحديد لون خلفية الزر */
+                        color: var(--white);/* تحديد لون النص داخل الزر */
+                        font-family: var(--ff-league_spartan);/* تحديد نوع الخط للزر */
+                        font-size: var(--fs-4);/* تحديد حجم الخط للزر */
+                        display: flex;/* تحديد عرض الزر كمرنر */
+                        align-items: center;/* تحديد محاذاة العناصر داخل الزر */
+                        gap: 7px;/* تحديد مسافة بين العناصر داخل الزر */
+                        max-width: max-content;/* تحديد أقصى عرض للزر */
+                        padding: 10px 20px;/* تحديد هوامش داخلية للزر */
+                        border-radius: var(--radius-5);/* تحديد شكل الزاوية للزر */
+                        overflow: hidden;/* إخفاء أي محتوى زائد */
+                      }
+                      
+                      .has-before,/* تحديد خصائص للعناصر التي تحتوي على عنصر قبل أو بعد */
+                      .has-after {
+                        position: relative;/* تحديد وضع العناصر ليكون نسبيًا للعناصر الأب */
+                        z-index: 1;/* تحديد ترتيب الطبقات */
+                      }
+                      
+                      .has-before::before,
+                      .has-after::after {/* تحديد وضع العناصر التي تحتوي على عنصر قبل أو بعد ليكون مطلقًا */
+                        position: absolute;/* إضافة محتوى فارغ للعناصر */
+                        content: "";
+                      }
+                      
+                      .btn::before {
+                        inset: 0; /* تعيين الحواف لتكون في الزاوية الأربع */
+                        background-image: var(--gradient);/* تحديد صورة الخلفية باستخدام متغير خلفية مخصص */
+                        z-index: -1;/* تحديد ترتيب الطبقات لتكون وراء الزر */
+                        border-radius: inherit;/* تحديد شكل الزاوية مثل الزر */
+                        transform: translateX(-100%);/* تحديد تحريك الظل إلى اليسار بنسبة 100% */
+                        transition: var(--transition-2);/* تحديد وقت التحول للتأثير */
+                      }
+                      
+                      .btn:is(:hover, :focus)::before { transform: translateX(0); }/* تحديد تحريك الظل عند التحويم أو التركيز على الزر */
+                      
+                      .img-holder {
+                        aspect-ratio: var(--width) / var(--height);
+                        background-color: var(--light-gray);
+                        overflow: hidden;
+                      }
+                      
+                      .img-cover {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                      }
+                      
+                     
+                      
+                      .grid-list {
+                        display: grid;
+                        gap: 30px;
+                      }
+                      
+                      .category-card,
+                      .stats-card { background-color: hsla(var(--color), 0.1); }
+                      
+                      :is(.course, .blog) .section-title { margin-block-end: 40px; }
+                      
+                      *, *::before, *::after {
+                        margin: 0; /* تعيين هوامش العناصر إلى القيمة الافتراضية */
+                        padding: 0; /* تعيين التباعد الداخلي للعناصر إلى القيمة الافتراضية */
+                        box-sizing: border-box; /* تحديد نموذج الصندوق ليكون حسب نموذج الحدود */
+                      }
+                      
+                      /* إزالة النقاط السوداء من القوائم */
+                      li {
+                        list-style: none; /* إزالة النقاط التي تظهر مع القوائم */
+                      }
+                      
+                     
+                      
+                      /* تنسيق الروابط */
+                      a {
+                        color: inherit; /* استخدام لون النص الموروث من العنصر الأم */
+                        text-decoration: none; /* إزالة تأثير التزيين النصي للروابط */
+                      }
+                      
+                      /* ضبط ارتفاع الصور بشكل تلقائي */
+                      img {
+                        height: auto; /* تحديد ارتفاع الصور ليكون تلقائيًا وفقًا للنسبة */
+                      }
+                      
+                      /* إعادة تعيين الأنماط لعناصر النماذج والأزرار */
+                      input, button {
+                        background: none; /* إزالة خلفية العناصر */
+                        border: none; /* إزالة حدود العناصر */
+                        font: inherit; /* استخدام نمط الخط الموروث من العنصر الأم */
+                      }
+                      
+                      /* جعل حقل الإدخال يمتد على كامل العرض */
+                      input {
+                        width: 100%; /* تحديد عرض حقل الإدخال ليمتد على كامل العرض */
+                      }
+                      
+                      /* تعيين مؤشر الفأرة للأزرار */
+                      button {
+                        cursor: pointer; /* تحديد نمط مؤشر الفأرة ليكون "pointer" */
+                      }
+                      
+                      /* تعطيل تأثيرات الحدث لأيقونات Ionicons */
+                      ion-icon {
+                        pointer-events: none; /* تعطيل تأثيرات الحدث لأيقونات Ionicons */
+                      }
+                      
+                      /* إعادة تعيين نمط الخط لعنصر العنوان */
+                      address {
+                        font-style: normal; /* إعادة تعيين نمط الخط ليكون عاديًا (بدون تأثيرات إضافية) */
+                      }
+                      
+                      /* تعيين الأنماط العامة لـ HTML والجسم */
+                      html {
+                        font-family: var(--ff-poppins); /* تحديد نمط الخط لجميع العناصر داخل الـ HTML */
+                        font-size: 10px; /* تحديد حجم الخط الأساسي بوحدة قياس البكسل */
+                        scroll-behavior: smooth; /* تفعيل التمرير السلس عند الانتقال بين الأقسام */
+                      }
+                      
+                      body {
+                        background-color: var(--white); /* تحديد لون خلفية الصفحة */
+                        color: var(--gray-web); /* تحديد لون النص الرئيسي */
+                        font-size: 1.6rem; /* تحديد حجم الخط للنصوص */
+                        line-height: 1.75; /* تحديد ارتفاع السطر للنصوص */
+                      }
+                      
+                      /* تحديد هامش الإطار للعنصر المركز عند التركيز */
+                      :focus-visible {
+                        outline-offset: 4px;
+                      }
+                      
+                      /* تنسيق شريط التمرير في متصفحات WebKit */
+                      ::-webkit-scrollbar {
+                        width: 10px; /* تحديد عرض شريط التمرير */
+                      }
+                      
+                      ::-webkit-scrollbar-track {
+                        background-color: hsl(0, 0%, 98%); /* تحديد لون مسار شريط التمرير */
+                      }
+                      
+                      ::-webkit-scrollbar-thumb {
+                        background-color: hsl(0, 0%, 80%); /* تحديد لون قاعدة إبهام شريط التمرير */
+                      }
+                      
+                      ::-webkit-scrollbar-thumb:hover {
+                        background-color: hsl(0, 0%, 70%); /* تحديد لون قاعدة إبهام شريط التمرير عند التحويم */
+                      }
+                    
+                      
+                      
+                    
+                      
+
+                      
+
+
+                      .hero {
+                        padding-block-start: calc(var(--section-padding) + 130px); /* حساب هوامش العنصر العليا */
+                        margin: 0;
+                        box-sizing: border-box;
+                      }
+
+ .container1{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-height: 100vh;
+                        
+ }                     
+                      
+.wrapper{
+width: 420px;
+background: #e68b61;
+color: #fff;
+border-radius: 10px ;
+padding:30px 40px ;
+}
+.wrapper h1{
+                        font-size: 36px;
+                        text-align: center;
+
+}
+.wrapper .input-box{
+                        width:100%;
+                        height: 50px;
+                        margin: 30px 0;
+
+}
+.input-box input{
+                        width: 100%;
+                        height: 100%;
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        border: 2px solid rgba(255, 255, 255, .2);
+                        border-radius: 40px;
+                        font-size: 16px;
+                        color: #fff;
+                        padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+                        color: #fff;
+
+}
+.input-box i {
+                        position: absolute;
+                        right: 20px;
+                        top: 50%;
+                        transform:translateY(-50%);
+                        font-size: 20px;
+}
+
+.wrapper .remember-forgot{
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 14.5px;
+                        margin: -15px 0 15px;
+}
+.remember-forgot label input{
+                        accent-color: #fff;
+                        margin-right: 3px;
+}
+.remember-forgot a{
+                        color: #fff;
+                        text-decoration: none;
+}
+.remember-forgot a:hover{
+                        text-decoration: underline;
+}
+
+.wrapper .btn1{
+                        width: 100%;
+                        height: 45px;
+                        background: #fff;
+                        border: none;
+                        outline: none;
+                        border-radius: 40px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+                        cursor: pointer;
+                        font-size: 16px;
+                        color: #333;
+                        font-weight: 600;
+}
+
+.wrapper .register-link{
+                        font-size: 14.5px;
+                        text-align: center;
+                        margin: 20px 0 15px;
+}
+
+.register-link p a {
+                        color: #fff;
+                        text-decoration: none;
+                        font-weight: 600;
+}
+
+
+
+.container2{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 120vh;
+                        padding-block-start: calc(var(--section-padding) + 130px); /* حساب هوامش العنصر العليا */
+                        
+}
+.section1{
+max-width: 650px;
+padding: 28px;
+                        margin: 0 28px;
+                        box-shadow: 0 15px 20px #84cbe3;                        
+}
+h2{
+                        text-align: left;
+                        font-size: 26px;
+                        font-weight: 600;
+                        color: #e68b61;
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid #f9f4f4;
+}
+.content{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between; 
+padding: 20px 0;                       
+}
+.input-box1{
+display: flex;
+flex-wrap: wrap;
+width: 50%;
+padding-bottom: 15px;                        
+}
+.input-box1:nth-child(2n){
+                        justify-content: end;
+}
+.input-box1 label{
+                        width:95% ;
+                        color: #e68b61;
+                        font-weight:bold ;
+                        margin: 5px 0;
+}
+.input-box1 input{
+                        height: 40px;
+                        width: 95%;
+                        padding: 0 10px;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                        outline: none;
+}
+.input-box1 input:is(:focus, :valid){
+                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.button-container{
+margin: 15px 0;
+
+}
+.button-container button{
+                        width: 120%;
+                        margin-top:10px ;
+                        padding: 10px;
+                        display: block;
+                        border: none;
+                        font-size: 20px;
+                        border-radius: 5px;
+                        background-color: #e68b61;
+}                     
+.button-container button:hover{
+                        background: linear-gradient(-90deg,hsl(151, 58%, 46%) 0%,hsl(170, 75%, 41%) 100%);
+                        cursor: pointer;
+}                    
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                        
+                      
+                      
+                      
+                     
+                      
+                      
+                      
+                        /**
+                         * REUSED STYLE
+                         */
+                      
+                        .container { max-width: 1185px; }
+                      
+                        .shape { display: block; }
+                      
+                        .about-content,
+                        .video-card,
+                        .blog { position: relative; }
+                      
+                      
+                      
+                        /**
+                         * HEADER
+                         */
+                      
+                        .header-action-btn:last-child,
+                        .navbar .wrapper,
+                        .overlay { display: none; }
+                      
+                        .header.active {
+                          transform: translateY(-100%);
+                          animation: slideIn 0.5s ease forwards;
+                        }
+                      
+                        @keyframes slideIn {
+                          0% { transform: translateY(-100%); }
+                          100% { transform: translateY(0); }
+                        }
+                      
+                        .navbar,
+                        .navbar.active { all: unset; }
+                      
+                        .navbar-list {
+                          display: flex;
+                          gap: 50px;
+                          padding: 0;
+                        }
+                      
+                        .navbar-item:not(:last-child) { border-block-end: none; }
+                      
+                        .navbar-link {
+                          color: var(--eerie-black-1);
+                          padding-block: 20px;
+                        }
+                      
+                        .header .btn { margin-inline-end: 0; }
+                        .header .container { max-width: unset; }
+                      
+                        .header-actions { gap: 30px; }
+                        .header .container { padding-inline: 30px; }
+                      
+                        .header .btn {
+                          display: flex;
+                          padding: 10px 30px;
+                          margin-inline: 20px;
+                        }
+                      
+                      
+                      
+                        
+                      
+                      
+                        

@@ -1,0 +1,1007 @@
+<!DOCTYPE html>  <!---- تعريف نوع المستند-->
+<html lang="en">  <!---بداية العنصر -->
+
+<head> <!--بداية الراس -->
+  <meta charset="UTF-8">  <!----تحديد ترميز الصفحة -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--توافق متصفح الانترنت -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!---تحديد عرض الجهاز وميزة التكبير --->
+
+  <!-- 
+    - primary meta tag
+  -->
+  <title>BRIDGE LANGUAGE</title>  <!---العنوان للموقع-->
+  <!---وصف للصفحة -->
+  <meta name="title" content="EduWeb - The Best Program to Enroll for Exchange">
+  <meta name="description" content="This is an education html template made by codewithsadee">
+
+  <!-- 
+    - favicon  رابط ايقونة الموقع
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link  رابط ملف css 
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 
+    - google font link  الخطوط المنزلة 
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images  تحميل مسبق للصور 
+  -->
+  <link rel="preload" as="image" href="./images/hero-bg.svg">
+  <link rel="preload" as="image" href="./images/hero-banner-1 (1).jpg">
+  <link rel="preload" as="image" href="./images/hero-banner-2 (1).jpg">
+  <link rel="preload" as="image" href="./images/hero-shape-1.svg">
+  <link rel="preload" as="image" href="./images/hero-shape-2.png">
+
+</head>
+
+<body id="top">  <!-- بداية هيكلة وجسم الموقع -->
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header> <!--- راس الصفحة -->
+    <div class="container"> <!-- عنصر للهيدر -->
+
+      <a href="#" class="logo"> <!-- شعار الموقع-->
+        <img src="./images/Logobr.jpeg" width="100" height="50" alt="EduWeb logo">
+      </a>
+
+      <nav class="navbar" data-navbar> <!--- ازرار التنقل بالصفحة -->
+
+        <div class="wrapper">
+          <a href="#" class="logo">
+            <img src="./images/logo.svg" width="162" height="50" alt="EduWeb logo">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler><!-- زر إغلاق شريط التنقل -->
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon> <!--ايقونة الاغلاق -->
+          </button>
+        </div>
+
+        <ul class="navbar-list"> <!--- قائمة شريط التنقل -->
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-nav-link>Home</a> <!--- زر home -->
+          </li>
+
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link" data-nav-link>About</a><!--- زر التعريف -->
+          </li>
+
+          <li class="navbar-item">
+            <a href="#courses" class="navbar-link" data-nav-link>Trainers</a>  <!---  زر المدربون-->
+          </li>
+
+          <li class="navbar-item">
+            <a href="#blog" class="navbar-link" data-nav-link>Courses</a> <!--زر الاخبار -->
+          </li>
+
+          <li class="navbar-item">
+            <a href="#footer" class="navbar-link" data-nav-link>Contact</a> <!---زر التواصل -->
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <div class="header-actions"> <!-- أزرار الإجراءات -->
+
+        <button class="header-action-btn" aria-label="toggle search" title="Search"> <!--- زر البحث-->          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <button class="header-action-btn" aria-label="cart" title="Cart"> <!--- زر التسوق -->
+          <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+
+          <span class="btn-badge">0</span>
+        </button>
+
+        <a href="Login.html" class="btn has-before" > <!-- زر التسجيل -->
+          <span class="span">Login</span>
+
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+
+        <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div> <!--- تراكيب القائمة -->
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" id="home" aria-label="home" 
+        style="background-image: url('./assets/images/hero-bg.svg')"><!-- بداية هيكلة home -->
+        <div class="container">  <!-- بداية عنصر للهيكلة -->
+
+          <div class="hero-content"> <!---محتوى الصفحة -->
+
+            <h1 class="h1 section-title"> <!---عنوان القسم -->
+                        A platform for <span class="span">learning</span> and exchanging the language
+            </h1>
+
+            <p class="hero-text"> <!---نص تعريفي -->
+                        . Users can register and participate in various lessons and events that give them the opportunity to interact with speakers of different languages and exchange language skills
+            </p>
+
+            <a href="Trainers.html" class="btn has-before"> <!---زر للبحث عن مدرب-->
+              <span class="span">TRAINERS</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+          <figure class="hero-banner"> <!--- صور للصفحة -->
+
+            <div class="img-holder one" style="--width: 270; --height: 300;">
+              <img src="./images/hero-banner-1 (1).jpg" width="270" height="300" alt="hero banner" class="img-cover">
+            </div>
+
+            <div class="img-holder two" style="--width: 240; --height: 370;">
+              <img src="./images/hero-banner-2 (1).jpg" width="240" height="370" alt="hero banner" class="img-cover">
+            </div>
+
+            <img src="./images/hero-shape-1.svg" width="380" height="190" alt="" class="shape hero-shape-1">
+
+           <img src="./images/hero-shape-2.png" width="622" height="551" alt="" class="shape hero-shape-2">
+
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CATEGORY
+      -->
+      <!--  الغرض من القسم -->
+
+      <section class="section category" aria-label="category">
+        <div class="container">  <!-- عنصر الحاوية الذي يحتوي على جميع عناصر القسم -->
+
+          <p class="section-subtitle">Categories</p>   <!-- عنوان فرعي للقسم يظهر على شكل فقرة، يوضح أنها فئات -->
+
+          <h2 class="h2 section-title"><!-- عنوان رئيسي للقسم يظهر على شكل ترويسة من المستوى الثاني، يتضمن نص "Learn now online with us" مع إضافة نمط للكلمة "now" باستخدام العنصر <span> لتغيير النمط -->
+             Learn <span class="span">now</span>  online with us
+          </h2>
+
+          <p class="section-text">  <!-- نص توضيحي للقسم يوضح الغرض منه -->
+                        Learn easily and with various categories within the platform
+          </p>
+
+          <ul class="grid-list">    <!-- قائمة غير مرتبة لعناصر القسم -->
+
+            <li>  <!-- عنصر في القائمة -->
+              <div class="category-card" style="--color: 170, 75%, 41%">        <!-- بطاقة الفئة تظهر كبطاقة بصورة ونص -->
+
+                <div class="card-icon">  <!-- عنصر يحتوي على أيقونة للفئة -->
+                  <img src="./images/category-1.svg" width="40" height="40" loading="lazy"
+                    alt="Online Degree Programs" class="img">
+                </div>
+
+                <h3 class="h3">   <!-- عنوان للفئة يتضمن رابطاً للانتقال إلى المزيد من المعلومات -->
+                  <a href="#" class="card-title">Learn English </a>
+                </h3>
+
+                <p class="card-text">   <!-- نص يوضح تفاصيل الفئة -->
+                        Learn English at the beginner level with teachers with extensive experience
+                </p>
+
+                <span class="card-badge">SOON</span>    <!-- عنصر يوضح معلومات إضافية حول الفئة -->
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 351, 83%, 61%">
+
+                <div class="card-icon">
+                  <img src="./images/category-2.svg" width="40" height="40" loading="lazy"
+                    alt="Non-Degree Programs" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Developing coaches</a>
+                </h3>
+
+                <p class="card-text">
+                        We aim to develop cadres interested in language training around the world within our platform
+                </p>
+
+                <span class="card-badge">SOON</span>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 229, 75%, 58%">
+
+                <div class="card-icon">
+                  <img src="./images/category-3.svg" width="40" height="40" loading="lazy"
+                    alt="Off-Campus Programs" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Talk to a coach</a>
+                </h3>
+
+                <p class="card-text">
+                        You can talk, choose the trainer available on the platform, and communicate with him
+                </p>
+
+                <span class="card-badge">10 coaches</span>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 42, 94%, 55%">
+
+                <div class="card-icon">
+                  <img src="./images/category-4.svg" width="40" height="40" loading="lazy"
+                    alt="Hybrid Distance Programs" class="img">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Writing content for trainers</a>
+                </h3>
+
+                <p class="card-text">
+                        Allowing trainers to write content and provide good content
+                </p>
+
+                <span class="card-badge">Soon</span>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT  يوضح أن القسم يرتبط بالمعلومات حول الصفحة أو الموقع.
+      -->
+     
+
+      <section class="section about" id="about" aria-label="about"><!-- 
+                        -  يُعرف قسم في صفحة الويب بفئة وهوية معينة ويستخدم لتوفير تسمية قابلة للوصول.
+                      -->
+        <div class="container">
+                        <!--   يستخدم لتنظيم وتحديد مجالات معينة من المحتوى على الصفحة. -->
+
+          <figure class="about-banner"> <!-- - عنصر: يُستخدم لتجميع العناصر المرئية والرسومات. -->
+                        
+                
+
+            <div class="img-holder" style="--width: 520; --height: 370;">
+              <img src="./images/about-banner.jpg" width="520" height="370" loading="lazy" alt="about banner"
+                class="img-cover">
+            </div>
+
+            <img src="./images/about-shape-1.svg" width="360" height="420" loading="lazy" alt=""
+              class="shape about-shape-1">
+
+            <img src="./images/about-shape-2.svg" width="371" height="220" loading="lazy" alt=""
+              class="shape about-shape-2">
+
+            <img src="./images/about-shape-3.png" width="722" height="528" loading="lazy" alt=""
+              class="shape about-shape-3">
+
+          </figure>
+
+          <div class="about-content"><!---يُستخدم لتنظيم وتجميع النصوص والمحتوى ذو الصلة-->
+
+            <p class="section-subtitle">About Us</p>
+
+            <h2 class="h2 section-title"> <!-- عنوان -->
+                        More than 5 years of <span class="span">education</span>  
+            </h2>
+
+            <p class="section-text">
+                        The platform offers diverse educational content that includes live lessons, educational materials, 
+                        and interactive activities, which helps users improve their language skills in a 
+                        fun and effective way.
+            </p>
+
+            <ul class="about-list"><!---قائمة -->
+
+              <li class="about-item">
+                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">Expert Trainers</span>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">Online Remote Learning</span>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+
+                <span class="span">Lifetime Access</span>
+              </li>
+
+            </ul>
+
+            <img src="./images/about-shape-4.svg" width="100" height="100" loading="lazy" alt=""
+              class="shape about-shape-4">
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #TRAINERS
+      -->
+
+      <section class="section course" id="courses" aria-label="course"><!-- للكورسات -->
+        <div class="container"><!---تحديد الفقرة  -->
+
+          <p class="section-subtitle">Trainers available</p><!--- فقرة نصية للتعريف-->
+
+          <h2 class="h2 section-title">Choose a coach to get started</h2><!---عنوان الفقرة الرئيسي -->
+
+          <ul class="grid-list"> <!---قائمة -->
+
+            <li>
+              <div class="course-card">
+
+                <figure class="card-banner img-holder" style="--width: 370; --height: 220;"><!---<figure> لتجميع العناصر التي تشمل الصور-->
+                  <img src="./images/course-1.jpg" width="370" height="220" loading="lazy"
+                    alt="Build Responsive Real- World Websites with HTML and CSS" class="img-cover">
+                </figure>
+
+                <div class="abs-badge"><!--يُستخدم لتجميع الرمز الزمني والنص-->
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon><!--يُستخدم لإظهار رمز الوقت أو الساعة-->
+
+                  <span class="span">3 Weeks</span><!--يُظهر مدة الدورة التدريبية بالأسابيع-->
+                </div>
+
+                <div class="card-content"><!---يُستخدم لتجميع محتوى بطاقة المعلومات-->
+
+                  <span class="badge">Beginner</span><!-- يُظهر علامة "Beginner" لتحديد مستوى الصعوبة أو المهارة-->
+
+                  <h3 class="h3"> <!--يُستخدم لعرض عناوين المحتوى-->
+                    <a href="#" class="card-title">Learn English from scratch by speaking</a><!---يُستخدم لتحديد رابط العنوان-->
+                  </h3>
+
+                  <div class="wrapper"><!--يُستخدم كحاوية عامة للعناصر داخله-->
+
+                    <div class="rating-wrapper"><!--يُستخدم لتجميع العناصر ذات العلامة الخاصة بتقييم المستخدم-->
+                      <ion-icon name="star"></ion-icon><!---يُستخدم لإظهار أيقونة النجمة-->
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <!--عناصر مكررة: تُستخدم لعرض 5 نجوم تشير إلى تقييم 5 نجوم-->
+                    </div>
+
+                    <p class="rating-text">(5.0/7 Rating)</p><!---فقرة لتوضيح التقييم -->
+
+                  </div>
+
+                  <data class="price" value="29">$49.00</data><!-- لتوضيح السعر -->
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">10 Lessons</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">20 Students</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="course-card">
+
+                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
+                  <img src=".//images/course-2.jpg" width="370" height="220" loading="lazy"
+                    alt="Java Programming Masterclass for Software Developers" class="img-cover">
+                </figure>
+
+                <div class="abs-badge">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                  <span class="span">10 Weeks</span>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="badge">middle</span>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Learn English from scratch by speaking</a>
+                  </h3>
+
+                  <div class="wrapper">
+
+                    <div class="rating-wrapper">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <p class="rating-text">(4.5 /9 Rating)</p>
+
+                  </div>
+
+                  <data class="price" value="49">$69.00</data>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">23 Lessons</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">35 Students</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="course-card">
+
+                <!--<figure class="card-banner img-holder" style="--width: 370; --height: 220;">
+                  <img src="./images/course-3.jpg" width="370" height="220" loading="lazy"
+                    alt="The Complete Camtasia Course for Content Creators" class="img-cover">
+                </figure>
+
+                <div class="abs-badge">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                  <span class="span">4 Weeks</span>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="badge">Beginner</span>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Learn English from scratch by speaking</a>
+                  </h3>
+
+                  <div class="wrapper">
+
+                    <div class="rating-wrapper">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <p class="rating-text">(4.9 /7 Rating)</p>
+
+                  </div>
+
+                  <data class="price" value="35">$35.00</data>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">13 Lessons</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">18 Students</span>
+                    </li>
+
+                  </ul>
+
+                </div>-->
+
+              </div>
+            </li>
+
+          </ul>
+
+          <a href="Trainers.html" class="btn has-before">
+            <span class="span">Search for a Trainers</span>
+
+            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #VIDEO
+      -->
+
+      <section class="video has-bg-image" aria-label="video"
+        style="background-image: url('./assets/images/video-bg.png')"><!-- يُستخدم لتحديد قسم في الصفحة ويحمل فئات وخصائص محددة-->
+        <div class="container"><!---يُستخدم كحاوية لتنظيم وتجميع المحتوى داخل القس-->
+
+          <div class="video-card"><!--يُستخدم لتجميع العناصر المتعلقة بالفيديو-->
+
+            <div class="video-banner img-holder has-after" style="--width: ; --height: ;"><!--يُستخدم لتجميع الصورة الرئيسية للفيديو-->
+              <img src="./images/video-banner.jpg" width="970" height="550" loading="lazy" alt="video banner"
+                class="img-cover"><!--يُظهر صورة بتحديد أبعاد وخاصية التحميل الكسلاني-->
+
+             
+            </div>
+
+            <img src="./images/video-shape-1.png" width="1089" height="605" loading="lazy" alt=""
+              class="shape video-shape-1">
+
+            <img src="./images/video-shape-2.png" width="158" height="174" loading="lazy" alt=""
+              class="shape video-shape-2">
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #STATE  القسم يتعلق بالإحصائيات أو المعلومات الرقمية
+      -->
+
+      <section class="section stats" aria-label="stats"> <!---يُستخدم لتعريف قسم في الصفحة وتحديد خصائصه-->
+        <div class="container"> <!---يُستخدم كحاوية لتنظيم وتجميع المحتوى داخل القسم-->
+
+          <ul class="grid-list"> <!-- يُستخدم لعرض قائمة-->
+
+            <li> <!--لتحديد عنصر في القائمة-->
+              <div class="stats-card" style="--color: 170, 75%, 41%"><!--  
+                        -  يُستخدم لتجميع معلومات الإحصائيات.
+                        -  يستخدم لتحديد لون العنصر بناءً على نموذج HSL.
+                      -->
+                <h3 class="card-title">10.8k</h3> <!---يُظهر عنوانًا للبيانات الإحصائية-->
+
+                <p class="card-text">Student Enrolled</p> <!--يُظهر نصًا وصفيًا للبيانات الإحصائية-->
+              </div>
+            </li>
+
+            <li>
+              <div class="stats-card" style="--color: 351, 83%, 61%">
+                <h3 class="card-title">20.8K</h3>
+
+                <p class="card-text">Class Completed</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="stats-card" style="--color: 260, 100%, 67%">
+                <h3 class="card-title">100%</h3>
+
+                <p class="card-text">Satisfaction Rate</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="stats-card" style="--color: 42, 94%, 55%">
+                <h3 class="card-title">350+</h3>
+
+                <p class="card-text">Top Instructors</p>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #NEWS القسم يتعلق بالأخبار
+      -->
+
+      <section class="section blog has-bg-image" id="blog" aria-label="blog"
+        style="background-image: url('./assets/images/blog-bg.svg')"><!--يُستخدم لتحديد قسم في الصفحة وتحديد خصائصه-->
+        <div class="container"> <!---لتنظيم وتجميع المحتوى داخل القسم-->
+
+          <p class="section-subtitle">The Most Important Courses</p> <!--عرض عنوان فرعي للقسم-->
+
+          <h2 class="h2 section-title">Courses</h2> <!---يُستخدم لعرض عنوان رئيسي للقسم-->
+
+          <ul class="grid-list"> <!---يُستخدم لعرض قائمة غير مرتبة-->
+
+            <li>
+              <div class="blog-card"> <!--يُستخدم لتجميع المحتوى المتعلق بالخبر-->
+
+                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;"> <!--يُستخدم لتجميع الصورة الرئيسية للخبر-->
+                  <img src="./images/blog-1 (1).jpg" width="370" height="370" loading="lazy"
+                    alt="Become A Better Blogger: Content Planning" class="img-cover">
+                </figure>
+
+                <div class="card-content"> <!--يُستخدم لتجميع المحتوى داخل بطاقة الخبر-->
+
+                  <a href="#" class="card-btn" aria-label="read more"> <!--يُستخدم لتحديد رابط لقراءة المزيد عن الخبر-->
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                  <a href="#" class="card-subtitle">Online</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Be a great speaker with us</a>
+                  </h3>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">Oct 10, 2024</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">Com 09</span>
+                    </li>
+
+                  </ul>
+
+                  <p class="card-text">
+                        Chat easily, directly and for free through the platform
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                  <img src="./images/blog-2 (1).jpg" width="370" height="370" loading="lazy"
+                    alt="Become A Better Blogger: Content Planning" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <a href="#" class="card-btn" aria-label="read more">
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                  <a href="#" class="card-subtitle">Online</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Speak fluently and easily</a>
+                  </h3>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">Nov 10, 2024</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">Com 09</span>
+                    </li>
+
+                  </ul>
+
+                  <p class="card-text">
+                        Chat easily, directly and for free through the platform
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <!--<li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                  <img src="./images/blog-3 (2).jpg" width="370" height="370" loading="lazy"
+                    alt="Become A Better Blogger: Content Planning" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <a href="#" class="card-btn" aria-label="read more">
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                  <a href="#" class="card-subtitle">Online</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Speak and learn English grammar</a>
+                  </h3>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">Oct 10, 2023</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">Com 09</span>
+                    </li>
+
+                  </ul>
+
+                  <p class="card-text">
+                        Chat easily, directly and for free through the platform
+                  </p>
+
+                </div>
+
+              </div>
+            </li>-->
+
+          </ul>
+<br>
+          <a href="Curricula.html" class="btn has-before">
+                        <span class="span">Search for a Courses </span>
+            
+                        <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                      </a>
+            
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER معلومات المنصة 
+  -->
+
+  <footer class="footer" style="background-image: url('./images/footer-bg.png')" id="footer">
+
+    <div class="footer-top section">
+      <div class="container grid-list">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo"><!--اضافة شعار المنصة -->
+            <img src="./images/logomd.png" width="162" height="50" alt="logo logo">
+          </a>
+
+          <p class="footer-brand-text">
+                        A platform for exchanging and learning languages online.
+          </p>
+
+          <!--<div class="wrapper">
+            <span class="span">Add:</span>
+
+            <address class="address">online</address>
+          </div>-->
+
+          <div class="wrapper">
+            <span class="span">Call:</span>
+
+            <a href="tel:+966 57579743" class="footer-link">+966 57579743</a>
+          </div>
+
+          <div class="wrapper">
+            <span class="span">Email:</span>
+
+            <a href="mailto:info@bridge.com" class="footer-link">info@bridge.com</a>
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Online Platform</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Courses</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Instructor</a>
+          </li>
+
+         
+         
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact Us</a>
+          </li>
+
+        
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Sign In/Registration</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Coming Soon</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Contacts</p>
+
+          <p class="footer-list-text">
+            Enter your email address to register to our newsletter subscription
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email_address" placeholder="Your email" required class="input-field">
+
+            <button type="submit" class="btn has-before">
+              <span class="span">Subscribe</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </form>
+
+          <ul class="social-list">
+
+           
+
+            <li>
+              <a href="https://www.instagram.com/languagebridge1?igsh=NTc4MTIwNjQ2YQ==" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://x.com/languagebridge_?s=11&t=O5LNBf8xJ8Cn8VAsSGzt3g" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+   <!--<div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          Copyright 2024 All Rights Reserved by <a href="#" class="copyright-link">codewithsadee</a>
+        </p>
+
+      </div>
+    </div>--> 
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

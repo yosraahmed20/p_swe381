@@ -1,0 +1,1450 @@
+
+
+:root {
+
+                        /**
+                         * colors
+                         */
+                      
+                        --selective-yellow: #d3e9f8;
+                        --eerie-black-1: hsl(0, 0%, 9%);
+                        --eerie-black-2: hsl(180, 3%, 7%);
+                        --quick-silver: hsl(0, 0%, 65%);
+                        --radical-red: #84cbe3;
+                        --light-gray: hsl(0, 0%, 80%);
+                        --isabelline: hsl(36, 33%, 94%);
+                        --gray-x-11: hsl(0, 0%, 73%);
+                        --kappel_15: hsla(170, 75%, 41%, 0.15);
+                        --platinum: hsl(0, 0%, 90%);
+                        --gray-web: hsl(0, 0%, 50%);
+                        --black_80: hsla(0, 0%, 0%, 0.8);
+                        --white_50: hsla(0, 0%, 100%, 0.5);
+                        --black_50: hsla(0, 0%, 0%, 0.5);
+                        --black_30: hsla(0, 0%, 0%, 0.3);
+                        --kappel: #e68b61;
+                        --white: hsl(0, 0%, 100%);
+                      
+                        /**
+                         * gradient color
+                         */
+                      
+                        --gradient: linear-gradient(-90deg,hsl(151, 58%, 46%) 0%,hsl(170, 75%, 41%) 100%);
+                      
+                        /**
+                         * typography
+                         */
+                      
+                        --ff-league_spartan: 'League Spartan', sans-serif;
+                        --ff-poppins: 'Poppins', sans-serif; 
+                      
+                        --fs-1: 4.2rem;
+                        --fs-2: 3.2rem;
+                        --fs-3: 2.3rem;
+                        --fs-4: 1.8rem;
+                        --fs-5: 1.5rem;
+                        --fs-6: 1.4rem;
+                        --fs-7: 1.3rem;
+                      
+                        --fw-500: 500;
+                        --fw-600: 600;
+                      
+                        /**
+                         * spacing
+                         */
+                      
+                        --section-padding: 75px;
+                      
+                        /**
+                         * shadow
+                         */
+                      
+                        --shadow-1: 0 6px 15px 0 hsla(0, 0%, 0%, 0.05);
+                        --shadow-2: 0 10px 30px hsla(0, 0%, 0%, 0.06);
+                        --shadow-3: 0 10px 50px 0 hsla(220, 53%, 22%, 0.1);
+                      
+                        /**
+                         * radius
+                         */
+                      
+                        --radius-pill: 500px;
+                        --radius-circle: 50%;
+                        --radius-3: 3px;
+                        --radius-5: 5px;
+                        --radius-10: 10px;
+                      
+                        /**
+                         * transition
+                         */
+                      
+                        --transition-1: 0.25s ease;
+                        --transition-2: 0.5s ease;
+                        --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+                        --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+                      
+                      }
+                      
+                      
+                      
+                      
+                      
+                     /*-----------------------------*/
+/*           #RESET            */
+/*-----------------------------*/
+
+/* إعادة تعيين نموذج الصندوق وإزالة الهوامش والتباعد لكافة العناصر */
+*, *::before, *::after {
+                        margin: 0; /* تعيين هوامش العناصر إلى القيمة الافتراضية */
+                        padding: 0; /* تعيين التباعد الداخلي للعناصر إلى القيمة الافتراضية */
+                        box-sizing: border-box; /* تحديد نموذج الصندوق ليكون حسب نموذج الحدود */
+                      }
+                      
+                      /* إزالة النقاط السوداء من القوائم */
+                      li {
+                        list-style: none; /* إزالة النقاط التي تظهر مع القوائم */
+                      }
+                      
+                      /* تعيين خصائص العرض لبعض العناصر بشكل محدد */
+                      a, img, span, data, input, button, ion-icon {
+                        display: block; /* تحديد نمط العرض ليكون block (يأخذ كل عرض متاح) */
+                      }
+                      
+                      /* تنسيق الروابط */
+                      a {
+                        color: inherit; /* استخدام لون النص الموروث من العنصر الأم */
+                        text-decoration: none; /* إزالة تأثير التزيين النصي للروابط */
+                      }
+                      
+                      /* ضبط ارتفاع الصور بشكل تلقائي */
+                      img {
+                        height: auto; /* تحديد ارتفاع الصور ليكون تلقائيًا وفقًا للنسبة */
+                      }
+                      
+                      /* إعادة تعيين الأنماط لعناصر النماذج والأزرار */
+                      input, button {
+                        background: none; /* إزالة خلفية العناصر */
+                        border: none; /* إزالة حدود العناصر */
+                        font: inherit; /* استخدام نمط الخط الموروث من العنصر الأم */
+                      }
+                      
+                      /* جعل حقل الإدخال يمتد على كامل العرض */
+                      input {
+                        width: 100%; /* تحديد عرض حقل الإدخال ليمتد على كامل العرض */
+                      }
+                      
+                      /* تعيين مؤشر الفأرة للأزرار */
+                      button {
+                        cursor: pointer; /* تحديد نمط مؤشر الفأرة ليكون "pointer" */
+                      }
+                      
+                      /* تعطيل تأثيرات الحدث لأيقونات Ionicons */
+                      ion-icon {
+                        pointer-events: none; /* تعطيل تأثيرات الحدث لأيقونات Ionicons */
+                      }
+                      
+                      /* إعادة تعيين نمط الخط لعنصر العنوان */
+                      address {
+                        font-style: normal; /* إعادة تعيين نمط الخط ليكون عاديًا (بدون تأثيرات إضافية) */
+                      }
+                      
+                      /* تعيين الأنماط العامة لـ HTML والجسم */
+                      html {
+                        font-family: var(--ff-poppins); /* تحديد نمط الخط لجميع العناصر داخل الـ HTML */
+                        font-size: 10px; /* تحديد حجم الخط الأساسي بوحدة قياس البكسل */
+                        scroll-behavior: smooth; /* تفعيل التمرير السلس عند الانتقال بين الأقسام */
+                      }
+                      
+                      body {
+                        background-color: var(--white); /* تحديد لون خلفية الصفحة */
+                        color: var(--gray-web); /* تحديد لون النص الرئيسي */
+                        font-size: 1.6rem; /* تحديد حجم الخط للنصوص */
+                        line-height: 1.75; /* تحديد ارتفاع السطر للنصوص */
+                      }
+                      
+                      /* تحديد هامش الإطار للعنصر المركز عند التركيز */
+                      :focus-visible {
+                        outline-offset: 4px;
+                      }
+                      
+                      /* تنسيق شريط التمرير في متصفحات WebKit */
+                      ::-webkit-scrollbar {
+                        width: 10px; /* تحديد عرض شريط التمرير */
+                      }
+                      
+                      ::-webkit-scrollbar-track {
+                        background-color: hsl(0, 0%, 98%); /* تحديد لون مسار شريط التمرير */
+                      }
+                      
+                      ::-webkit-scrollbar-thumb {
+                        background-color: hsl(0, 0%, 80%); /* تحديد لون قاعدة إبهام شريط التمرير */
+                      }
+                      
+                      ::-webkit-scrollbar-thumb:hover {
+                        background-color: hsl(0, 0%, 70%); /* تحديد لون قاعدة إبهام شريط التمرير عند التحويم */
+                      }
+                      
+                      
+                      
+                      /*-----------------------------------*\
+                        #REUSED STYLE
+                      \*-----------------------------------*/
+                      
+                      .container { padding-inline: 15px; } /* هوامش افقية */
+                      
+                      .section { padding-block: var(--section-padding); }/*هوامش للاقسام*/
+                      
+                      .shape {/* تحديد خصائص للعنصر shape */
+                        position: absolute;/* تحديد وضع العنصر ليكون مطلقًا */
+                        display: none;/* إخفاء العنصر */
+                      }
+                      
+                      .has-bg-image {/* تحديد خصائص للعناصر التي تحمل صورة خلفية */
+                        background-repeat: no-repeat;/* عدم تكرار الصورة */
+                        background-size: cover; /* تغطية كاملة للخلفية */
+                        background-position: center;/* توسيط الصورة */
+                      }
+                      
+                      .h1,
+                      .h2,
+                      .h3 {/* تحديد خصائص لعناوين العناصر (h1, h2, h3) */
+                        color: var(--eerie-black-1);/* تحديد لون النص */
+                        font-family: var(--ff-league_spartan);/* تحديد نوع الخط */
+                        line-height: 1;/* تحديد ارتفاع السطر */
+                      }
+                      
+                      .h1,
+                      .h2 { font-weight: var(--fw-600); }/* تحديد وزن الخط لـ h1 و h2 */
+                      
+                      .h1 { font-size: var(--fs-1); }/* تحديد حجم الخط لـ h1 */
+                      
+                      .h2 { font-size: var(--fs-2); }/* تحديد حجم الخط لـ h2 */
+                      
+                      .h3 {
+                        font-size: var(--fs-3);/* تحديد حجم الخط لـ h3 */
+                        font-weight: var(--fw-500);/* تحديد وزن الخط لـ h3 */
+                      }
+                      
+                      .section-title {/* تحديد خصائص لعنوان القسم */
+                        --color: var(--radical-red);/* تحديد لون مخصص */
+                        text-align: center;/* توسيط النص */
+                      }
+                      
+                      .section-title .span {
+                        display: inline-block;/* جعل العنصر span عنصرًا مستقلًا */
+                        color: var(--color);/* تحديد لون النص داخل ال span */
+                      }
+                      
+                      .btn {/* تحديد خصائص للأزرار */
+                        background-color: var(--kappel);/* تحديد لون خلفية الزر */
+                        color: var(--white);/* تحديد لون النص داخل الزر */
+                        font-family: var(--ff-league_spartan);/* تحديد نوع الخط للزر */
+                        font-size: var(--fs-4);/* تحديد حجم الخط للزر */
+                        display: flex;/* تحديد عرض الزر كمرنر */
+                        align-items: center;/* تحديد محاذاة العناصر داخل الزر */
+                        gap: 7px;/* تحديد مسافة بين العناصر داخل الزر */
+                        max-width: max-content;/* تحديد أقصى عرض للزر */
+                        padding: 10px 20px;/* تحديد هوامش داخلية للزر */
+                        border-radius: var(--radius-5);/* تحديد شكل الزاوية للزر */
+                        overflow: hidden;/* إخفاء أي محتوى زائد */
+                      }
+                      
+                      .has-before,/* تحديد خصائص للعناصر التي تحتوي على عنصر قبل أو بعد */
+                      .has-after {
+                        position: relative;/* تحديد وضع العناصر ليكون نسبيًا للعناصر الأب */
+                        z-index: 1;/* تحديد ترتيب الطبقات */
+                      }
+                      
+                      .has-before::before,
+                      .has-after::after {/* تحديد وضع العناصر التي تحتوي على عنصر قبل أو بعد ليكون مطلقًا */
+                        position: absolute;/* إضافة محتوى فارغ للعناصر */
+                        content: "";
+                      }
+                      
+                      .btn::before {
+                        inset: 0; /* تعيين الحواف لتكون في الزاوية الأربع */
+                        background-image: var(--gradient);/* تحديد صورة الخلفية باستخدام متغير خلفية مخصص */
+                        z-index: -1;/* تحديد ترتيب الطبقات لتكون وراء الزر */
+                        border-radius: inherit;/* تحديد شكل الزاوية مثل الزر */
+                        transform: translateX(-100%);/* تحديد تحريك الظل إلى اليسار بنسبة 100% */
+                        transition: var(--transition-2);/* تحديد وقت التحول للتأثير */
+                      }
+                      
+                      .btn:is(:hover, :focus)::before { transform: translateX(0); }/* تحديد تحريك الظل عند التحويم أو التركيز على الزر */
+                      
+                      .img-holder {
+                        aspect-ratio: var(--width) / var(--height);
+                        background-color: var(--light-gray);
+                        overflow: hidden;
+                      }
+                      
+                      .img-cover {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                      }
+                      
+                      .section-subtitle {
+                        font-size: var(--fs-5);
+                        text-transform: uppercase;
+                        font-weight: var(--fw-500);
+                        letter-spacing: 1px;
+                        text-align: center;
+                        margin-block-end: 15px;
+                      }
+                      
+                      .section-text {
+                        font-size: var(--fs-5);
+                        text-align: center;
+                        margin-block: 15px 25px;
+                      }
+                      
+                      .grid-list {
+                        display: grid;
+                        gap: 30px;
+                      }
+                      
+                      .category-card,
+                      .stats-card { background-color: hsla(var(--color), 0.1); }
+                      
+                      :is(.course, .blog) .section-title { margin-block-end: 40px; }
+                      
+                      
+                      
+                      
+                      
+                      /*-----------------------------------*\
+                        #HEADER
+                      \*-----------------------------------*/
+                      
+                      .header .btn { display: none; }/* إخفاء زر الهامش عندما يكون الهامش نشطًا */
+                      
+                      .header {/* تحديد خصائص الهامش */
+                        position: absolute;/* تحديد وضع الهامش ليكون مطلقًا */
+                        top: 0;/* تحديد الهامش في الأعلى */
+                        left: 0;/* تحديد الهامش في اليسار */
+                        width: 100%;/* تحديد عرض الهامش بنسبة 100% */
+                        background-color: var(--white);/* تحديد لون خلفية الهامش */
+                        padding-block: 12px;/* تحديد هوامش عمودية للهامش */
+                        box-shadow: var(--shadow-1);/* تحديد ظل للهامش */
+                        z-index: 4;/* تحديد ترتيب الطبقات */
+                      }
+                      
+                      .header.active/* تحديد خصائص للهامش عندما يكون نشطًا */
+                       { position: fixed; } /* تحديد وضع الهامش ليكون ثابتًا عند التمرير */
+                      
+                      .header .container,
+                      .header-actions,
+                      .navbar .wrapper {/* تحديد خصائص للعناصر داخل الهامش (container, header-actions, navbar .wrapper) */
+                        display: flex; /* تحديد عرض العناصر كمرنر *//* تحديد توزيع المسافات بين العناصر */
+                        justify-content: space-between; /* تحديد محاذاة العناصر في الاتجاه الرأسي */
+                        align-items: center; /* تحديد المسافات بين العناصر */
+                        gap: 15px;
+                      }
+                      
+                      .header-action-btn,
+                      .nav-close-btn {/* تحديد خصائص للأزرار والزر لإغلاق القائمة */
+                        position: relative; /* تحديد وضع الأزرار ليكون نسبيًا للهامش */
+                        color: var(--eerie-black-1); /* تحديد لون النص */
+                        font-size: 24px; /* تحديد حجم الخط */
+                        transition: var(--transition-1);/* تحديد وقت التحول */
+                      }
+                      
+                      .header-action-btn:is(:hover, :focus) { color: var(--kappel); }/* تغيير لون النص عند تحويم أو تركيز على الزر */
+                      
+                      .header-action-btn .btn-badge {/* تحديد خصائص للشارة الظاهرة على الأزرار */
+                        position: absolute;/* تحديد وضع الشارة ليكون مطلقًا */
+                        top: -10px;/* تحديد الهامش العلوي للشارة */
+                        right: -10px;/* تحديد الهامش الأيمن للشارة */
+                        background-color: var(--kappel);/* تحديد لون خلفية الشارة */
+                        color: var(--white);/* تحديد لون النص في الشارة */
+                        font-family: var(--ff-league_spartan);/* تحديد نوع الخط في الشارة */
+                        font-size: var(--fs-6);/* تحديد حجم الخط في الشارة */
+                        min-width: 20px; /* تحديد أدنى عرض للشارة */
+                        height: 20px; /* تحديد ارتفاع الشارة */
+                        border-radius: var(--radius-circle); /* تحديد شكل الزاوية للشارة */
+                      }
+                      
+                      .navbar {
+                        position: fixed; /* تحديد وضع القائمة ليكون ثابتًا */
+  top: 0; /* تحديد الهامش العلوي للقائمة */
+  left: -320px; /* تحديد الهامش الأيسر للقائمة (تكون خارج الشاشة) */
+  background-color: var(--white); /* تحديد لون خلفية القائمة */
+  width: 100%; /* تحديد عرض القائمة بنسبة 100% */
+  max-width: 320px; /* تحديد أقص*/
+                        max-width: 320px;
+                        height: 100%;
+                        z-index: 2;
+                        transition: 0.25s var(--cubic-in);
+                      }
+                      
+                      .navbar.active {
+                        transform: translateX(320px); /* تحريك القائمة إلى اليمين لتظهر بشكل كامل */
+  transition: 0.5s var(--cubic-out); /* تحديد وقت التحول للقائمة النشطة */
+}
+                      
+                      
+                      /* تحديد خصائص لعناصر القائمة (wrapper) */
+               .navbar .wrapper {
+                        padding: 15px 20px; /* تحديد هوامش داخلية لعناصر القائمة */
+                        border-block-end: 1px solid var(--platinum); /* إضافة حد للحد السفلي للعناصر */
+                      }
+                      
+                      /* تحديد خصائص لزر إغلاق القائمة */
+            .nav-close-btn {
+                        background-color: var(--white); /* تحديد لون خلفية زر الإغلاق */
+                        box-shadow: var(--shadow-2); /* تحديد ظل لزر الإغلاق */
+                        padding: 8px; /* تحديد هوامش داخلية لزر الإغلاق */
+                        border-radius: var(--radius-circle); /* تحديد شكل الزاوية لزر الإغلاق */
+                      }
+                      
+                      /* تغيير لون زر الإغلاق عند التحويم أو التركيز عليه */
+.nav-close-btn:is(:hover, :focus) {
+                        background-color: var(--kappel); /* تحديد لون خلفية زر الإغلاق عند التحويم أو التركيز */
+                        color: var(--white); /* تحديد لون النص في زر الإغلاق عند التحويم أو التركيز */
+                      }
+                      
+                      /* تحديد خصائص لعناصر القائمة (navbar-list) */
+.navbar-list {
+                        padding: 15px 20px; /* تحديد هوامش داخلية لعناصر القائمة */
+                      }
+                      
+                      /* تحديد خصائص لعنصر القائمة (navbar-item) عندما لا يكون آخر عنصر */
+.navbar-item:not(:last-child) {
+                        border-block-end: 1px solid var(--platinum); /* إضافة حد للحد السفلي للعناصر غير الأخيرة */
+                      }
+                      
+                      .navbar-link {
+                        padding-block: 8px; /* تحديد هوامش داخلية للروابط داخل القائمة */
+                        font-weight: var(--fw-500); /* تحديد وزن الخط للروابط */
+                        transition: var(--transition-1); /* تحديد وقت التحول للروابط */
+                      }
+                      
+                      /* تغيير لون الرابط عند التحويم أو التركيز عليه */
+.navbar-link:is(:hover, :focus) {
+                        color: var(--kappel); /* تحديد لون النص للروابط عند التحويم أو التركيز */
+                      }
+                      
+                     
+                        .overlay {
+                        position: fixed; /* تحديد وضع التأثير الغامض ليكون ثابتًا */
+                        inset: 0; /* تحديد حواف التأثير لتكون في الزاوية الأربع */
+                        background-color: var(--black_80); /* تحديد لون خلفية التأثير الغامض */
+                        pointer-events: none; /* تعط*/
+                        opacity: 0;
+                        z-index: 1;
+                        transition: var(--transition-1);
+                      }
+                      
+                      .overlay.active {
+                        opacity: 1;
+                        pointer-events: all;
+                      }
+                      
+                      
+                      
+                      
+                      
+                      /*-----------------------------------*\
+                        #HERO
+                      \*-----------------------------------*/
+                      
+                     /* تحديد هامش البداية للعنصر الرئيسي (hero) */
+.hero {
+                        padding-block-start: calc(var(--section-padding) + 80px); /* حساب هوامش العنصر العليا */
+                      }
+                      
+                      /* تحديد خصائص للعنصر الرئيسي (container) داخل hero */
+.hero .container {
+                        display: grid; /* تحديد عرض العنصر كشبكة */
+                        gap: 40px; /* تحديد مسافات الفراغ بين العناصر */
+                      }
+                      
+                      /* تحديد خصائص للنص الرئيسي (hero-text) داخل hero */
+.hero-text {
+                        color: var(--eerie-black-1); /* تحديد لون النص */
+                        font-size: var(--fs-4); /* تحديد حجم الخط */
+                        text-align: center; /* تحديد محاذاة النص في الوسط */
+                        margin-block: 18px 20px; /* تحديد هوامش عمودية للنص */
+                      }
+                      
+                      /* تحديد هوامش أفقية للزر داخل hero */
+.hero .btn {
+                        margin-inline: auto; /* تحديد هوامش أفقية للزر */
+                      }
+                      
+                      .hero-banner {
+                        display: grid; /* تحديد عرض البانر كشبكة */
+                        grid-template-columns: 1fr 0.8fr; /* تحديد توزيع الأعمدة في البانر */
+                        align-items: flex-start; /* تحديد محاذاة العناصر في الاتجاه الرأسي لتكون في الأعلى */
+                        gap: 30px; /* تحديد مسافات الفراغ بين العناصر في البانر */
+                      }
+                      
+                     /* تحديد خصائص لحامل الصورة الأولى في البانر (img-holder.one) */
+.hero-banner .img-holder.one {
+                        border-top-right-radius: 70px; /* تحديد شكل الزاوية العلوية اليمنى لحامل الصورة */
+                        border-bottom-left-radius: 110px; /* تحديد شكل الزاوية السفلية اليسرى لحامل الصورة */
+                      }
+                      
+                      /* تحديد خصائص لحامل الصورة الثانية في البانر (img-holder.two) */
+                      .hero-banner .img-holder.two {
+                        border-top-left-radius: 50px; /* تحديد شكل الزاوية العلوية اليسرى لحامل الصورة */
+                        border-bottom-right-radius: 90px; /* تحديد شكل الزاوية السفلية اليمنى لحامل الصورة */
+                      }
+                      
+                      
+                      
+                      
+                      
+                      /*-----------------------------------*\
+                        #CATEGORY
+                      \*-----------------------------------*/
+                      
+                      /* تحديد لون النص للعنوان الفرعي في القسم (section-subtitle) داخل category */
+.category .section-subtitle {
+                        color: var(--radical-red); /* تحديد لون النص */
+                      }
+                      
+                     /* تحديد لون النص للعنوان الرئيسي في القسم (section-title) داخل category */
+.category .section-title {
+                        --color: var(--kappel); /* تحديد متغير اللون للعنوان الرئيسي */
+                      }
+                      
+                      /* تحديد هوامش سفلية للنص الرئيسي في القسم (section-text) داخل category */
+.category .section-text {
+                        margin-block-end: 40px; /* تحديد هوامش عمودية للنص */
+                      }
+                      
+                      /* تحديد خصائص لبطاقة الفئة (category-card) داخل category */
+.category-card {
+                        padding: 50px 30px; /* تحديد هوامش داخلية للبطاقة */
+                        text-align: center; /* تحديد محاذاة النص في الوسط */
+                        border-radius: var(--radius-5); /* تحديد شكل الزاوية للبطاقة */
+                      }
+                      
+                      /* تحديد خصائص لأيقونة البطاقة (card-icon) داخل category-card */
+.category-card .card-icon {
+                        background-color: hsla(var(--color), 0.1); /* تحديد لون خلفية أيقونة البطاقة */
+                        width: 80px; /* تحديد عرض أيقونة البطاقة */
+                        height: 80px; /* تحديد ارتفاع أيقونة البطاقة */
+                        display: grid; /* تحديد عرض العنصر كشبكة */
+                        place-items: center; /* تحديد محاذاة العناصر في الوسط */
+                        border-radius: var(--radius-circle); /* تحديد شكل الزاوية لأيقونة البطاقة */
+                        margin-inline: auto; /* تحديد هوامش أفقية لأيقونة البطاقة */
+                        margin-block-end: 30px; /* تحديد هوامش عمودية لأيقونة البطاقة */
+                      }
+                      
+                      /* تحديد خصائص للنص داخل البطاقة (card-text) داخل category-card */
+.category-card .card-text {
+                        color: var(--eerie-black-1); /* تحديد لون النص */
+                        font-size: var(--fs-5); /* تحديد حجم الخط */
+                        margin-block: 15px 25px; /* تحديد هوامش عمودية للنص */
+                      }
+                      
+/* تحديد خصائص لشارة البطاقة (card-badge) داخل category-card */
+                      .category-card .card-badge {
+                        background-color: hsla(var(--color), 0.1);/* تحديد لون خلفية شارة البطاقة */
+                        color: hsl(var(--color));/* تحديد لون النص في شارة البطاقة */
+                        font-size: var(--fs-5);/* تحديد حجم الخط في شارة البطاقة */
+                        font-weight: var(--fw-500);/* تحديد وزن الخط في شارة البطاقة */
+                        padding: 2px 18px;/* تحديد هوامش داخلية لشارة البطاقة */
+                        max-width: max-content;/* تحديد أقصى عرض لشارة البطاقة */
+                        margin-inline: auto;/* تحديد هوامش أفقية لشارة البطاقة */
+                        border-radius: var(--radius-5); /* تحديد شكل الزاوية لشارة البطاقة */
+                      }
+                      
+                      
+                      
+                      
+                      
+                      /*-----------------------------------*\
+                        #ABOUT
+                      \*-----------------------------------*/
+                      /* تحديد هوامش البداية للعنصر الرئيسي (about) */
+                      .about {
+                        padding-block-start: 0; /* إلغاء هوامش البداية للعنصر */
+                        overflow: hidden;/* إخفاء الزوائد من العنصر الفوقي */
+                      }
+                      /* تحديد خصائص للعنصر الرئيسي (container) داخل about */
+                      .about .container {
+                        display: grid;/* تحديد عرض العنصر كشبكة */
+                        gap: 30px;/* تحديد مسافات الفراغ بين العناصر */
+                      }
+                      
+                      .about-banner {/* تحديد خصائص للبانر في العنصر (about-banner) داخل about */
+                        position: relative; /* تحديد الوضع للبانر كموضع نسبي */
+                        z-index: 1;/* تحديد ترتيب الطبقات للبانر */
+                      }
+                      
+                      .about-banner .img-holder /* تحديد شكل الزاوية لحامل الصورة (img-holder) في about-banner */
+                      { border-radius: var(--radius-10); }/* تحديد شكل الزاوية لحامل الصورة */
+                      
+                      .about-shape-2 {/* تحديد خصائص للشكل 2 (about-shape-2) في about */
+                        display: block;/* إظهار العنصر */
+                        bottom: -100px;/* تحديد الوضع من الأسفل بناءً على النصف من الطول */
+                        left: -60px;/* تحديد الوضع من اليسار بناءً على نصف العرض */
+                        animation: bounce 2.5s infinite;/* تحديد التحرك باستمرارية */
+                      }
+                      
+                      @keyframes bounce {/* تحديد تحركات العنصر أثناء الرسوم البيانية (keyframes) للتأثير (bounce) */
+                        0%,
+                        20%,
+                        50%,
+                        80%,
+                        100% { transform: translateY(0); }/* تحديد التحرك في اتجاه محدد بناءً على نصف الطول */
+                      
+                        40% { transform: translateY(-30px); }/* تحديد التحرك في اتجاه معاكس للأعلى */
+                      
+                        60% { transform: translateY(-15px); }/* تحديد التحرك في اتجاه معاكس للأعلى بشكل أقل */
+                      }
+                      
+                      .about :is(.section-subtitle, .section-title, .section-text) {/* تحديد محاذاة النص في الوسط للعناصر */
+                        text-align: left;/* تحديد محاذاة النص إلى اليسار */
+                      }
+                      
+                      .about-item {/* تحديد خصائص للعنصر (about-item) داخل about */
+                        margin-block: 15px; /* تحديد هوامش عمودية للعنصر */
+                        display: flex;/* تحديد عرض العنصر كعنصر مرن */
+                        align-items: center;/* تحديد محاذاة العناصر في الاتجاه الرأسي */
+                        gap: 15px; /* تحديد مسافات الفراغ بين العناصر */
+                      }
+                      
+                      .about-item ion-icon {/* تحديد لون الأيقونة (ion-icon) داخل about-item */
+                        color: var(--selective-yellow);/* تحديد لون الأيقونة */
+                        font-size: 20px;/* تحديد حجم الخط للأيقونة */
+                        --ionicon-stroke-width: 50px; /* تحديد سمك الخط للأيقونة */
+                      }
+                      
+                      .about-item .span {/* تحديد لون النص (span) داخل about-item */
+                        color: var(--eerie-black-1);/* تحديد لون النص */
+                        font-family: var(--ff-league_spartan);/* تحديد نمط الخط */
+                      }
+                      
+                      
+                      
+                      
+                      
+                      /*-----------------------------------*\
+                        #COURSE
+                      \*-----------------------------------*/
+                      /* تحديد لون خلفية العنصر الرئيسي (course) */
+                      .course { background-color: var(--isabelline); }/* تحديد لون خلفية العنصر */
+                      
+                      .course-card {/* تحديد خصائص للبطاقة الخاصة بالدورة (course-card) */
+                        position: relative;/* تحديد الوضع للبطاقة كوضع نسبي */
+                        background-color: var(--white);/* تحديد لون خلفية البطاقة */
+                        border-radius: var(--radius-5); /* تحديد شكل الزاوية للبطاقة */
+                        overflow: hidden; /* إخفاء الزوائد من البطاقة */
+                      }
+                      
+                      .course-card .img-cover/* تحديد خصائص لتأثير الانتقال على الصورة في داخل البطاقة */
+                       { transition: var(--transition-2); } /* تحديد مدة التحول */
+                      
+                      .course-card:is(:hover, :focus-within) .img-cover /* تحديد تأثير التكبير عند تحديد الماوس على البطاقة */
+                      { transform: scale(1.1); }/* تحديد التكبير بنسبة معينة */
+                      
+                      .course-card :is(.abs-badge, .badge) {/* تحديد خصائص مشتركة بين الشارات (abs-badge و badge) */
+                        font-family: var(--ff-league_spartan);/* تحديد نمط الخط */
+                        border-radius: var(--radius-3);/* تحديد شكل الزاوية للشارة */
+                      }
+                      
+                      .course-card .abs-badge {/* تحديد خصائص للشارة المطبوعة على الصورة (abs-badge) */
+                        position: absolute;/* تحديد الوضع للشارة كوضع مطلق */
+                        top: 10px; /* تحديد الوضع من الأعلى بناءً على البعد المحدد */
+                        right: 10px;/* تحديد الوضع من اليمين بناءً على البعد المحدد */
+                        background-color: var(--selective-yellow);/* تحديد لون خلفية الشارة */
+                        color: var(--white);/* تحديد لون النص في الشارة */
+                        display: flex; /* تحديد عرض العنصر كعنصر مرن */
+                        align-items: center;/* تحديد محاذاة العناصر في الاتجاه الرأسي */
+                        gap: 5px;/* تحديد مسافات الفراغ بين العناصر */
+                        line-height: 1;/* تحديد ارتفاع السطر */
+                        padding: 6px 8px;/* تحديد هوامش داخلية للشارة */
+                        padding-block-end: 3px;/* تحديد هوامش سفلية للشارة */
+                      }
+                      
+                      .course-card .abs-badge ion-icon {/* تحديد خصائص لأيقونة الشارة المطبوعة على الصورة (ion-icon) داخل abs-badge */
+                        font-size: 18px;/* تحديد حجم الخط للأيقونة */
+                        margin-block-end: 5px;/* تحديد هوامش سفلية للأيقونة */
+                        --ionicon-stroke-width: 50px;/* تحديد سمك الخط للأيقونة */
+                      }
+                      
+                      .course-card .card-content/* تحديد خصائص للمحتوى داخل البطاقة (card-content) */
+                       { padding: 25px; } /* تحديد هوامش داخلية للمحتوى */
+                      
+                      .course-card .badge {
+                        background-color: var(--kappel_15);
+                        max-width: max-content;
+                        color: var(--kappel);
+                        line-height: 25px;
+                        padding-inline: 10px;
+                      }
+                      
+                      .course-card .card-title {/* تحديد خصائص للعنوان داخل البطاقة (card-title) */
+                        display: -webkit-box;/* تحديد عرض الصندوق كمربع فعلي */
+                        -webkit-box-orient: vertical;/* تحديد توجيه الصندوق بشكل رأسي */
+                        -webkit-line-clamp: 2; /* تحديد عدد الأسطر المعروضة */
+                        overflow: hidden;/* إخفاء الزوائد من العنصر */
+                        margin-block: 15px 8px; /* تحديد هوامش عمودية للعنصر */
+                        transition: var(--transition-1);/* تحديد مدة التحول */
+                      }
+                      
+                      .course-card .card-title:is(:hover, :focus)/* تحديد تأثير تغيير لون العنصر عند تحديد الماوس على العنصر (hover أو focus) */
+                       { color: var(--kappel); }/* تحديد لون العنوان عند التأشير أو التركيز عليه */
+                      
+                      .course-card :is(.wrapper, .rating-wrapper, .card-meta-list, .card-meta-item)/* تحديد خصائص مشتركة بين الحاويات (wrapper, rating-wrapper, card-meta-list, card-meta-item) */
+                       {
+                        display: flex;/* تحديد عرض العنصر كعنصر مرن */
+                        align-items: center; /* تحديد محاذاة العناصر في الاتجاه الرأسي */
+                      }
+                      
+
+                      /* تحديد مسافات الفراغ بين العناصر في الحاويات (wrapper, rating-wrapper) */
+                      .course-card .wrapper { gap: 10px; }
+                      
+                      .course-card .rating-wrapper { gap: 3px; }
+                      
+                      .course-card .rating-wrapper ion-icon { color: var(--selective-yellow); }
+                      
+                      .course-card .rating-text {/* تحديد لون النص (rating-text) داخل البطاقة */
+                        color: var(--eerie-black-1);/* تحديد لون النص */
+                        font-size: var(--fs-6);/* تحديد حجم الخط */
+                        font-weight: var(--fw-500);/* تحديد وزن الخط */
+                      }
+                      
+                      .course-card .price {
+                        /* تحديد خصائص للسعر (price) داخل البطاقة */
+                        color: var(--radical-red);/* تحديد لون السعر */
+                        font-family: var(--ff-league_spartan);/* تحديد نمط الخط */
+                        font-size: var(--fs-4); /* تحديد حجم الخط */
+                        font-weight: var(--fw-600);/* تحديد وزن الخط */
+                        margin-block: 8px 15px;/* تحديد هوامش عمودية للسعر */
+                      }
+                      
+                      .course-card .card-meta-list/* تحديد خصائص للقائمة الفرعية داخل البطاقة (card-meta-list) */
+                       { flex-wrap: wrap; }/* تحديد السماح بالتفاف العناصر عند الحاجة */
+                      
+                      .course-card .card-meta-item {/* تحديد خصائص للعنصر الفرعي (card-meta-item) داخل البطاقة */
+                        position: relative;/* تحديد الوضع للعنصر كوضع نسبي */
+                        gap: 5px;/* تحديد مسافات الفراغ بين العناصر */
+                      }
+                      
+                      .course-card .card-meta-item:not(:last-child)::after {/* تحديد خصائص للفاصل بين العناصر (|) داخل card-meta-item */
+                        content: "|";/* إضافة الفاصل */
+                        display: inline-block;/* تحديد عرض العنصر كعنصر مضمن */
+                        color: var(--platinum);/* تحديد لون الفاصل */
+                        padding-inline: 10px;/* تحديد هوامش أفقية للفاصل */
+                      }
+                      
+                      .course-card .card-meta-item ion-icon {/* تحديد خصائص للأيقونة (ion-icon) داخل card-meta-item */
+                        color: var(--quick-silver);/* تحديد لون الأيقونة */
+                        --ionicon-stroke-width: 50px;/* تحديد سمك الخط للأيقونة */
+                      }
+                      
+                      .course-card .card-meta-item .span {/* تحديد خصائص للنص (span) داخل card-meta-item */
+                        color: var(--eerie-black-1);/* تحديد لون النص */
+                        font-size: var(--fs-7); /* تحديد حجم الخط */
+                      }
+                      
+                      .course .btn {/* تحديد خصائص للزر (btn) داخل الدورة */
+                        margin-inline: auto;/* تحديد هوامش أفقية للزر */
+                        margin-block-start: 60px;/* تحديد هوامش عمودية للزر */
+                      }
+                      
+                      
+                      
+                      
+                      
+                      /*-----------------------------------*\
+                        #VIDEO
+                      \*-----------------------------------*/
+                      /* تحديد حجم الخلفية للفيديو (video) */
+                      .video {
+                        background-size: contain;/* تحديد حجم الخلفية */
+                        background-position: center top;/* تحديد موقع الخلفية */
+                      }
+                      
+                      .video-banner {/* تحديد خصائص للشعار في الفيديو (video-banner) */
+                        position: relative;/* تحديد الوضع للشعار كوضع نسبي */
+                        border-top-right-radius: 80px;/* تحديد شكل الزاوية العلوية اليمنى للشعار */
+                        border-bottom-left-radius: 120px;/* تحديد شكل الزاوية السفلية اليسرى للشعار */
+                      }
+                      /* تحديد خصائص لزر التشغيل (play-btn) في الفيديو */
+                      .video .play-btn {
+                        position: absolute;/* تحديد الوضع للزر كوضع مطلق */
+                        top: 50%;/* تحديد الوضع من الأعلى بناءً على الابتعاد المئوي */
+                        left: 50%;/* تحديد الوضع من اليسار بناءً على الابتعاد المئوي */
+                        transform: translate(-50%, -50%);/* تحديد التحول للزر للمحافظة على مركزه */
+                        background-color: var(--radical-red);/* تحديد لون خلفية الزر */
+                        font-size: 30px; /* تحديد حجم الخط للزر */
+                        padding: 16px;/* تحديد هوامش داخلية للزر */
+                        color: var(--white); /* تحديد لون النص في الزر */
+                        border-radius: var(--radius-circle);/* تحديد شكل الزاوية للزر */
+                        box-shadow: 0 0 0 0 var(--white_50);/* تحديد ظل للزر */
+                        z-index: 1;/* تحديد ترتيب الطبقات للزر فوق الشعار */
+                        animation: pulse 3s ease infinite;/* تحديد تأثير النبض للزر */
+                      }
+                      
+                      @keyframes pulse {/* تحديد تأثير النبض (pulse) للزر */
+                        0% { box-shadow: 0 0 0 0 var(--white_50); }
+                        100% { box-shadow: 0 0 0 20px transparent; }
+                      }
+                      
+                      .video-banner::after {/* تحديد خصائص للطبقة الفاصلة بعد الشعار (video-banner::after) */
+                        inset: 0;/* تحديد موقع الطبقة بحسب الأربعة الزوايا */
+                        background-color: var(--black_30);/* تحديد لون الخلفية للطبقة */
+                      }
+                      
+                      
+                      
+                      
+                      
+                      /*-----------------------------------*\
+                        #STATS
+                      \*-----------------------------------*/
+                      /* تحديد خصائص للبطاقة الإحصائية (stats-card) */
+                      .stats-card {
+                        text-align: center;/* تحديد محاذاة النص في وسط البطاقة */
+                        padding: 25px;
+                        border-radius: var(--radius-10);
+                      }
+                      
+                      .stats-card :is(.card-title, .card-text) { font-family: var(--ff-league_spartan); }
+                      
+                      .stats-card .card-title {
+                        color: hsl(var(--color));
+                        font-size: var(--fs-2);
+                        line-height: 1.1;
+                      }
+                      
+                      .stats-card .card-text {
+                        color: var(--eerie-black-1);
+                        text-transform: uppercase;
+                      }
+                      
+                      
+                      
+                      
+                      
+                      /*-----------------------------------*\
+                        #BLOG
+                      \*-----------------------------------*/
+                      
+                      .blog-card .card-banner { border-radius: var(--radius-10); }
+                      
+                      .blog-card .card-banner .img-cover { transition: var(--transition-2); }
+                      
+                      .blog-card .card-banner::after {
+                        inset: 0;
+                        background-color: var(--black_50);
+                        opacity: 0;
+                        transition: var(--transition-1);
+                      }
+                      
+                      .blog-card:is(:hover, :focus-within) .card-banner .img-cover { transform: scale(1.1); }
+                      
+                      .blog-card:is(:hover, :focus-within) .card-banner::after { opacity: 1; }
+                      
+                      .blog-card .card-content {
+                        position: relative;
+                        margin-inline: 15px;
+                        background-color: var(--white);
+                        padding: 20px;
+                        border-radius: var(--radius-10);
+                        box-shadow: var(--shadow-3);
+                        margin-block-start: -100px;
+                        z-index: 1;
+                      }
+                      
+                      .blog-card .card-btn {
+                        position: absolute;
+                        top: -40px;
+                        right: 30px;
+                        background-color: var(--kappel);
+                        color: var(--white);
+                        font-size: 20px;
+                        padding: 20px;
+                        border-radius: var(--radius-circle);
+                        transition: var(--transition-1);
+                        opacity: 0;
+                      }
+                      
+                      .blog-card .card-btn:is(:hover, :focus) { background-color: var(--radical-red); }
+                      
+                      .blog-card:is(:hover, :focus-within) .card-btn {
+                        opacity: 1;
+                        transform: translateY(10px);
+                      }
+                      
+                      .blog-card :is(.card-meta-item, .card-text, .card-subtitle) {
+                        font-size: var(--fs-5);
+                      }
+                      
+                      .blog-card .card-subtitle { text-transform: uppercase; }
+                      
+                      .blog-card .card-title {
+                        margin-block: 10px 15px;
+                        transition: var(--transition-1);
+                      }
+                      
+                      .blog-card .card-title:is(:hover, :focus) { color: var(--kappel); }
+                      
+                      .blog-card :is(.card-meta-list, .card-meta-item) { display: flex; }
+                      
+                      .blog-card .card-meta-list {
+                        flex-wrap: wrap;
+                        gap: 10px 20px;
+                        margin-block-end: 20px;
+                      }
+                      
+                      .blog-card .card-meta-item {
+                        gap: 10px;
+                        align-items: center;
+                        color: var(--eerie-black-1);
+                      }
+                      
+                      .blog-card .card-meta-item ion-icon {
+                        color: var(--kappel);
+                        font-size: 18px;
+                        --ionicon-stroke-width: 40px;
+                      }
+                      
+                      
+                      
+                      
+                      
+                      /*-----------------------------------*\
+                        #FOOTER
+                      \*-----------------------------------*/
+                      
+                      .footer {
+                        background-repeat: no-repeat;
+                        background-color: var(--eerie-black-2);
+                        color: var(--gray-x-11);
+                        font-size: var(--fs-5);
+                      }
+                      
+                      .footer-top {
+                        display: grid;
+                        gap: 30px;
+                      }
+                      
+                      .footer-brand-text { margin-block: 20px; }
+                      
+                      .footer-brand .wrapper {
+                        display: flex;
+                        gap: 5px;
+                      }
+                      
+                      .footer-brand .wrapper .span { font-weight: var(--fw-500); }
+                      
+                      .footer-link { transition: var(--transition-1); }
+                      
+                      .footer-link:is(:hover, :focus) { color: var(--kappel); }
+                      
+                      .footer-list-title {
+                        color: var(--white);
+                        font-family: var(--ff-league_spartan);
+                        font-size: var(--fs-3);
+                        font-weight: var(--fw-600);
+                        margin-block-end: 10px;
+                      }
+                      
+                      .footer-list .footer-link { padding-block: 5px; }
+                      
+                      .newsletter-form { margin-block: 20px 35px; }
+                      
+                      .newsletter-form .input-field {
+                        background-color: var(--white);
+                        padding: 12px;
+                        border-radius: var(--radius-5);
+                        margin-block-end: 20px;
+                      }
+                      
+                      .newsletter-form .btn {
+                        min-width: 100%;
+                        justify-content: center;
+                      }
+                      
+                      .social-list {
+                        display: flex;
+                        gap: 25px;
+                      }
+                      
+                      .social-link { font-size: 20px; }
+                      
+                      .footer-bottom {
+                        border-block-start: 1px solid var(--eerie-black-1);
+                        padding-block: 30px;
+                      }
+                      
+                      .copyright { text-align: center; }
+                      
+                      .copyright-link {
+                        color: var(--kappel);
+                        display: inline-block;
+                      }
+                      
+                      
+                      
+                      
+                      
+                      /*-----------------------------------*\
+                        #BACK TO TOP
+                      \*-----------------------------------*/
+                      
+                      .back-top-btn {
+                        position: fixed;
+                        bottom: 40px;
+                        right: 30px;
+                        background-color: var(--kappel);
+                        color: var(--white);
+                        font-size: 20px;
+                        padding: 15px;
+                        border-radius: var(--radius-circle);
+                        z-index: 3;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: var(--transition-1);
+                      }
+                      
+                      .back-top-btn.active {
+                        transform: translateY(10px);
+                        opacity: 1;
+                        pointer-events: all;
+                      }
+                      
+                      
+                      
+                      
+                      
+                      /*-----------------------------------*\
+                        #MEDIA QUERIES
+                      \*-----------------------------------*/
+                      
+                      /**
+                       * responsive for large than 575px screen
+                       */
+                      
+                      @media (min-width: 575px) {
+                      
+                        /**
+                         * REUSED STYLE
+                         */
+                      
+                        .container {
+                          max-width: 520px;
+                          width: 100%;
+                          margin-inline: auto;
+                        }
+                      
+                        .grid-list { grid-template-columns: 1fr 1fr; }
+                      
+                        :is(.course, .blog) .grid-list { grid-template-columns: 1fr; }
+                      
+                      
+                      
+                        /**
+                         * HEADER
+                         */
+                      
+                        .header .container { max-width: unset; }
+                      
+                        .header-actions { gap: 30px; }
+                      
+                      
+                      
+                        /**
+                         * HERO
+                         */
+                      
+                        .hero-banner { grid-template-columns: 1fr 0.9fr; }
+                      
+                      
+                      
+                        /**
+                         * VIDEO
+                         */
+                      
+                        .video .play-btn { padding: 25px; }
+                      
+                      
+                      
+                        /**
+                         * STATS
+                         */
+                      
+                        .stats-card { padding: 40px 30px; }
+                      
+                      
+                      
+                        /**
+                         * FOOTER
+                         */
+                      
+                        .footer-brand,
+                        .footer-list:last-child { grid-column: 1 / 3; }
+                      
+                        .newsletter-form {
+                          display: flex;
+                          align-items: center;
+                          gap: 10px;
+                        }
+                      
+                        .newsletter-form .input-field { margin-block-end: 0; }
+                      
+                        .newsletter-form .btn { min-width: max-content; }
+                      
+                      }
+                      
+                      
+                      
+                      
+                      
+                      /**
+                       * responsive for large than 768px screen
+                       */
+                      
+                      @media (min-width: 768px) {
+                      
+                        /**
+                         * CUSTOM PROPERTY
+                         */
+                      
+                        :root {
+                      
+                          /**
+                           * typography
+                           */
+                      
+                          --fs-1: 4.6rem;
+                          --fs-2: 3.8rem;
+                      
+                        }
+                      
+                      
+                      
+                        /**
+                         * REUSED STYLE
+                         */
+                      
+                        .container { max-width: 720px; }
+                      
+                        .btn { padding: 15px 30px; }
+                      
+                        :is(.course, .blog) .grid-list { grid-template-columns: 1fr 1fr; }
+                      
+                      
+                      
+                        /**
+                         * HEADER
+                         */
+                      
+                        .header .container { padding-inline: 30px; }
+                      
+                        .header .btn {
+                          display: flex;
+                          padding: 10px 30px;
+                          margin-inline: 20px;
+                        }
+                      
+                      
+                      
+                        /**
+                         * HERO
+                         */
+                      
+                        .hero { padding-block-start: calc(var(--section-padding) + 90px); }
+                      
+                        .hero .container { gap: 50px; }
+                      
+                        .hero-text { margin-block-end: 30px; }
+                      
+                        .hero-banner {
+                          position: relative;
+                          z-index: 1;
+                        }
+                      
+                        .hero-banner .img-holder { max-width: max-content; }
+                      
+                        .hero-banner .img-holder.one { justify-self: flex-end; }
+                      
+                        .hero-banner .img-holder.two { margin-block-start: 100px; }
+                      
+                        .hero-shape-1 {
+                          display: block;
+                          position: absolute;
+                          bottom: -40px;
+                          left: -10px;
+                        }
+                      
+                      
+                      
+                        /**
+                         * ABOUT
+                         */
+                      
+                        .about { padding-block-start: 50px; }
+                      
+                        .about-banner {
+                          padding: 60px;
+                          padding-inline-end: 0;
+                        }
+                      
+                        .about-banner .img-holder {
+                          max-width: max-content;
+                          margin-inline: auto;
+                        }
+                      
+                        .about-shape-1 {
+                          display: block;
+                          top: -40px;
+                          right: -70px;
+                        }
+                      
+                      
+                      
+                        /**
+                         * FOOTER
+                         */
+                      
+                        .footer-brand,
+                        .footer-list:last-child { grid-column: auto; }
+                      
+                        .newsletter-form .btn { padding-block: 10px; }
+                      
+                      }
+                      
+                      
+                      
+                      
+                      
+                      /**
+                       * responsive for large than 992px screen
+                       */
+                      
+                      @media (min-width: 992px) {
+                      
+                        /**
+                         * CUSTOM PROPERTY
+                         */
+                      
+                        :root {
+                      
+                          /**
+                           * typography
+                           */
+                      
+                          --fs-1: 5.5rem;
+                          --fs-2: 4.5rem;
+                      
+                        }
+                      
+                      
+                      
+                        /**
+                         * REUSED STYLE
+                         */
+                      
+                        .container { max-width: 960px; }
+                      
+                        .grid-list { grid-template-columns: repeat(4, 1fr); }
+                      
+                        :is(.course, .blog) .grid-list { grid-template-columns: 1fr 1fr; }
+                      
+                      
+                      
+                        /**
+                         * HERO
+                         */
+                      
+                        .hero .container {
+                          grid-template-columns: 1fr 1fr;
+                          align-items: center;
+                        }
+                      
+                        .hero .section-title,
+                        .hero-text { text-align: left; }
+                      
+                        .hero .btn { margin-inline: 0; }
+                      
+                      
+                      
+                        /**
+                         * ABOUT
+                         */
+                      
+                        .about .container {
+                          grid-template-columns: 1fr 0.6fr;
+                          align-items: center;
+                          gap: 60px;
+                        }
+                      
+                      
+                      
+                        /**
+                         * VIDEO
+                         */
+                      
+                        .video-banner {
+                          max-width: 75%;
+                          margin-inline: auto;
+                        }
+                      
+                      
+                      
+                        /**
+                         * FOOTER
+                         */
+                      
+                        .footer .grid-list { grid-template-columns: 1fr 0.6fr 0.6fr 1.2fr; }
+                      
+                      }
+                      
+                      
+                      
+                      
+                      
+                      /**
+                       * responsive for large than 1200px screen
+                       */
+                      
+                      @media (min-width: 1200px) {
+                      
+                        /**
+                         * CUSTOM PROPERTY
+                         */
+                      
+                        :root {
+                      
+                          /**
+                           * typography
+                           */
+                      
+                          --fs-1: 6.5rem;
+                      
+                          /**
+                           * spacing
+                           */
+                      
+                          --section-padding: 120px;
+                      
+                        }
+                      
+                      
+                      
+                        /**
+                         * REUSED STYLE
+                         */
+                      
+                        .container { max-width: 1185px; }
+                      
+                        .shape { display: block; }
+                      
+                        .about-content,
+                        .video-card,
+                        .blog { position: relative; }
+                      
+                      
+                      
+                        /**
+                         * HEADER
+                         */
+                      
+                        .header-action-btn:last-child,
+                        .navbar .wrapper,
+                        .overlay { display: none; }
+                      
+                        .header.active {
+                          transform: translateY(-100%);
+                          animation: slideIn 0.5s ease forwards;
+                        }
+                      
+                        @keyframes slideIn {
+                          0% { transform: translateY(-100%); }
+                          100% { transform: translateY(0); }
+                        }
+                      
+                        .navbar,
+                        .navbar.active { all: unset; }
+                      
+                        .navbar-list {
+                          display: flex;
+                          gap: 50px;
+                          padding: 0;
+                        }
+                      
+                        .navbar-item:not(:last-child) { border-block-end: none; }
+                      
+                        .navbar-link {
+                          color: var(--eerie-black-1);
+                          padding-block: 20px;
+                        }
+                      
+                        .header .btn { margin-inline-end: 0; }
+                      
+                      
+                      
+                        /**
+                         * HERO
+                         */
+                      
+                        .hero { padding-block-start: calc(var(--section-padding) + 120px); }
+                      
+                        .hero .container { gap: 80px; }
+                      
+                        .hero-shape-2 {
+                          top: -80px;
+                          z-index: -1;
+                        }
+                      
+                      
+                      
+                        /**
+                         * ABOUT
+                         */
+                      
+                        .about .container { gap: 110px; }
+                      
+                        .about-banner .img-holder { margin-inline: 0; }
+                      
+                        .about-shape-3 {
+                          top: -20px;
+                          left: -100px;
+                          z-index: -1;
+                        }
+                      
+                        .about-content { z-index: 1; }
+                      
+                        .about-shape-4 {
+                          top: 30px;
+                          right: -60px;
+                          z-index: -1;
+                        }
+                      
+                      
+                      
+                        /**
+                         * VIDEO
+                         */
+                      
+                        .video-shape-1 {
+                          top: -50px;
+                          left: 0;
+                        }
+                      
+                        .video-shape-2 {
+                          top: -80px;
+                          right: 120px;
+                          z-index: 1;
+                        }
+                      
+                      
+                      
+                        /**
+                         * BLOG
+                         */
+                      
+                        .blog-shape {
+                          top: 0;
+                          left: 0;
+                        }
+                      
+                      }
